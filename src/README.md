@@ -1,10 +1,12 @@
 ---
-cover: .gitbook/assets/output-onlinepngtools.png
+cover: >-
+  .gitbook/assets/2023 Branding APEX logo-Light Backgrounds (Left Aligned)
+  (1).png
 coverY: 0
 layout:
   cover:
     visible: true
-    size: hero
+    size: full
   title:
     visible: true
   description:
