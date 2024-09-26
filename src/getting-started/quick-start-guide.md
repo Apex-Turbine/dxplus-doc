@@ -30,14 +30,14 @@ Taking a look at some of the other VTI Settings:
   * If you disable this and if the calibration is invalid, then it will not allow you to run. You'll get an error message on your setup step.
 * FIFO Mode
   * Stop (the default setting) - if the FIFO overflows, it's going to stop the acquisition.&#x20;
-  * Overwrite - TODO
-  * Wait - TODO
+  * Overwrite - TODO add info
+  * Wait - TODO add info
 * Channel List Dropdown
   * Shows a list of all channels in the Setup
   * Allows you to change settings on a per channel basis or Apply All
     * Function
       * selection of IEPE enables a field for setting Excitation Current
-      * selection of Strain enables all available options for Strain mode (gauge resistance, gauge factor, etc)
+      * selection of Strain enables all available options for Strain mode (gauge resistance, gauge factor, etc.)
     * Sample Rate&#x20;
       * all channels on a card must have the same sample rate
     * Coupling
@@ -105,3 +105,35 @@ Changes made to an element's settings requires the design to be re-submitted
 <figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
 
 1. Go to the Viewer by clicking the Viewer tab on the leftmost edge of the DX+ window
+2. Notice the channels appear in the Signal Pane on the left
+   * They are available as FFT processed signals and also as raw signals from the device
+3. Select a plot space in the Viewer Canvas
+4. Use the Ctrl+A keyboard shortcut to select all spaces
+   * If multiple spaces are not present, you can create them to match the screenshot by clicking the Grid icon in the ribbon and selecting the 3x3 configuration
+5. Select 3 signals from the device and drag them to the top left plot space
+6. Click the '1 trace Per ' button and select History as the plot type
+7. Repeat the process for the FFT processed signals and select Mag+Env as the plot type
+
+{% hint style="info" %}
+Available plot types are determined by the data type of the underlying stream. E.g.
+
+* FFT data can be plotted as Magnitude, Envelope, Mag+Env, Campbell, Zmod, & Bar
+* Time-based data can be plotted as Time, History, Strip, & Graphic (Gauge, Text, Thermometer, LEDs)
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+
+## DAQ Control
+
+1. Navigate to the DAQ Control tab at the top of the ribbon bar
+2. Click the Start button in the upper left corner
+3. DX+ will start acquiring data from the device&#x20;
+4. Notice the plots are showing the data in realtime
+5. Return to the Viewer tab and change the Grid configuration to be 2x3 to maximize the area of your plots on the canvas
+6. Return to the DAQ Control tab and take note of the System Usage gauges
+7. Click the Stop button to stop acquiring data and note the change in the System Usage gauges
+
+## Conclusion
+
+By following this guide, you should have an understanding and familiarity with the basic operations of DX+, but of course there are more features and use cases to be explored. Please continue through the documentation, search for terms, or reach out to us if you have further questions.
+
