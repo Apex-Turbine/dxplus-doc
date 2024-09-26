@@ -2,7 +2,7 @@
 
 ## DX+ Designer
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/designer.png" alt=""><figcaption></figcaption></figure>
 
 Upon launching DX+ we see the Designer. From here we can drag down input elements and begin building a design.
 
@@ -10,7 +10,7 @@ Upon launching DX+ we see the Designer. From here we can drag down input element
 
 For this example we will use the VTI DSA Device element.
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/VTIelementPanel.png" alt=""><figcaption></figcaption></figure>
 
 Once the element is created, we can connect to the device.
 
@@ -21,9 +21,9 @@ Once the element is created, we can connect to the device.
 
 
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/VTIpanel1&#x26;2.png" alt=""><figcaption></figcaption></figure>
 
-Taking a look at some of the other VTI Settings:
+## Taking a look at some of the other VTI Settings:
 
 * Allow invalid calibration checkbox
   * This is required to be checked to be able to connect and perform the measurement operation on the 4380 card that we have.
@@ -44,7 +44,7 @@ Taking a look at some of the other VTI Settings:
     * Mode
     * Range
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/addViewerOutput.png" alt=""><figcaption></figcaption></figure>
 
 ## Output: Viewer Element
 
@@ -60,7 +60,7 @@ Other outputs are also available
 * DX+ Publisher - allows you to publish data onto the network which can be seen by the DX+ Standalone Viewer
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/FFT.png" alt=""><figcaption></figcaption></figure>
 
 ## Processing: FFT Element
 
@@ -72,7 +72,7 @@ Next we will add an FFT element to process the data
 4. Click and drag from the VTI Device element to the FFT element and release the mouse button
 5. Now data will flow through the design in the direction of the arrow you created
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/disableChannels.png" alt="" width="441"><figcaption></figcaption></figure>
 
 ## Disabling Channels
 
@@ -88,7 +88,7 @@ When the design is set up according to your needs, it would be wise to save the 
 3. Choose a filename and location
 4. Click Save
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/SubmitDesign.png" alt=""><figcaption></figcaption></figure>
 
 ## Submit Design
 
@@ -100,9 +100,9 @@ When the design is set up according to your needs, it would be wise to save the 
 Changes made to an element's settings requires the design to be re-submitted
 {% endhint %}
 
-## Viewer
+## DX+ Viewer
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Viewer.png" alt=""><figcaption></figcaption></figure>
 
 1. Go to the Viewer by clicking the Viewer tab on the leftmost edge of the DX+ window
 2. Notice the channels appear in the Signal Pane on the left
@@ -113,6 +113,9 @@ Changes made to an element's settings requires the design to be re-submitted
 5. Select 3 signals from the device and drag them to the top left plot space
 6. Click the '1 trace Per ' button and select History as the plot type
 7. Repeat the process for the FFT processed signals and select Mag+Env as the plot type
+8. The result should look like this:
+
+<figure><img src="../.gitbook/assets/2x3Plots.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Available plot types are determined by the data type of the underlying stream. E.g.
@@ -121,7 +124,7 @@ Available plot types are determined by the data type of the underlying stream. E
 * Time-based data can be plotted as Time, History, Strip, & Graphic (Gauge, Text, Thermometer, LEDs)
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/placeholder image (2).jfif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/DAQcontrol.png" alt=""><figcaption></figcaption></figure>
 
 ## DAQ Control
 
@@ -135,5 +138,7 @@ Available plot types are determined by the data type of the underlying stream. E
 
 ## Conclusion
 
-By following this guide, you should have an understanding and familiarity with the basic operations of DX+, but of course there are more features and use cases to be explored. Please continue through the documentation, search for terms, or reach out to us if you have further questions.
+By following this guide, you should have an understanding and familiarity with the basic operations of DX+, but of course there are many more features and use cases to be explored.&#x20;
+
+Please continue through the documentation, search for terms, or reach out to us if you have further questions.
 
