@@ -1,2 +1,6 @@
-# VIEWER
+---
+hidden: true
+---
+
+# DX+ VIEWER
 

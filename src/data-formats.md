@@ -1,2 +1,6 @@
+---
+hidden: true
+---
+
 # DATA FORMATS
 
