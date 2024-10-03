@@ -1,5 +1,18 @@
 # Quick Start Guide
 
+The Quick Start Guide is available as&#x20;
+
+1. [a video guide](quick-start-guide.md#id-1.-quick-start-video) or&#x20;
+2. [a step-by-step guide with text & screenshots](quick-start-guide.md#id-2.-step-by-step-text-and-screenshot-guide)
+
+## 1. Quick Start Video:
+
+
+
+{% embed url="https://youtu.be/rkK3mgWYRoQ?si=l4FPtmFeR6gKMDHo" %}
+
+## 2. Step-By-Step Text & Screenshot Guide:
+
 ## DX+ Designer
 
 <figure><img src="../.gitbook/assets/designer.png" alt=""><figcaption></figcaption></figure>
