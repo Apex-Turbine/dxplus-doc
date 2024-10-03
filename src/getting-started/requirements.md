@@ -1,7 +1,5 @@
 # System Requirements
 
-TODO double check actual requirements
-
 ## Operating System
 
 ### Windows

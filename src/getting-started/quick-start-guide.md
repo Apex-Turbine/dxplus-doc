@@ -43,8 +43,8 @@ Once the element is created, we can connect to the device.
   * If you disable this and if the calibration is invalid, then it will not allow you to run. You'll get an error message on your setup step.
 * FIFO Mode
   * Stop (the default setting) - if the FIFO overflows, it's going to stop the acquisition.&#x20;
-  * Overwrite - TODO add info
-  * Wait - TODO add info
+  * Overwrite
+  * Wait
 * Channel List Dropdown
   * Shows a list of all channels in the Setup
   * Allows you to change settings on a per channel basis or Apply All
