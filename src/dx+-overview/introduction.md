@@ -1,6 +1,6 @@
 # Introduction
 
-DX+ is a multipurpose test, measurement, analysis, and reporting tool created for use in the aerospace and mechanical engineering industries, with additional application in general purpose data acquisition.
+DX+ is a multipurpose test, measurement, analysis, and reporting platform created for use in the aerospace and mechanical engineering industries with additional application in general purpose data acquisition.
 
 <figure><img src="../.gitbook/assets/Designer&#x26;Viewer(topBottom)skinny (1).png" alt=""><figcaption><p><strong>DX+ Designer above &#x26; DX+ Viewer below</strong><br><em>DX+ includes an intuitive building block system for connecting device hardware and routing data through secure networking and storage</em></p></figcaption></figure>
 
