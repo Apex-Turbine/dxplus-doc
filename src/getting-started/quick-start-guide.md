@@ -42,9 +42,12 @@ Once the element is created, we can connect to the device.
   * This is required to be checked to be able to connect and perform the measurement operation on the 4380 card that we have.
   * If you disable this and if the calibration is invalid, then it will not allow you to run. You'll get an error message on your setup step.
 * FIFO Mode
-  * Stop (the default setting) - if the FIFO overflows, it's going to stop the acquisition.&#x20;
+  * Stop (the default setting)
+    * If the FIFO overflows, it's going to stop the acquisition.&#x20;
   * Overwrite
+    * Overwrites the data in the FIFO . This prevents an overflow but allows for data loss.
   * Wait
+    * Makes the FIFO wait for reading before adding more data to the fifo. This prevents data loss, but if the client can't keep up, the memory usage will increase until eventual application or system crash.
 * Channel List Dropdown
   * Shows a list of all channels in the Setup
   * Allows you to change settings on a per channel basis or Apply All
