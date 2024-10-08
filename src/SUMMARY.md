@@ -8,7 +8,7 @@
   * [Installing & Licensing](getting-started/installing-and-licensing.md)
   * [Quick Start Guide](getting-started/quick-start-guide.md)
 * [DX+ DESIGNER](dx+-designer/README.md)
-  * [Components](https://apexturbine.gitbook.io/phoenix-documentation/components)
+  * [Components](https://apexturbine.gitbook.io/phoenix-documentation)
 * [DX+ DESIGNER](dx+-designer-1/README.md)
   * [Ribbon](dx+-designer-1/ribbon/README.md)
     * [Ribbon Bar](dx+-designer-1/ribbon/ribbon-bar/README.md)
