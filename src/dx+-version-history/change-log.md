@@ -1,5 +1,11 @@
 # Change Log
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/DX+_blue@300x.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
 ## Versions
 
 ***

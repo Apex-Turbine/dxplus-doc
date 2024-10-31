@@ -1,5 +1,11 @@
 # Known Issues
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/DX+_blue@300x.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
 **Last Updated:** October 31, 2024
 
 ### List of Known Issues
