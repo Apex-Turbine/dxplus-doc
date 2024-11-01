@@ -4,7 +4,7 @@
   * [Introduction](dx+-overview/introduction.md)
   * [Features Overview](dx+-overview/features-overview.md)
 * [GETTING STARTED](getting-started/README.md)
-  * [System Requirements](getting-started/requirements.md)
+  * [System Requirements](getting-started/system-requirements.md)
   * [Installing & Licensing](getting-started/installing-and-licensing.md)
   * [Quick Start Guide](getting-started/quick-start-guide.md)
 * [DX+ DESIGNER](dx+-designer/README.md)
