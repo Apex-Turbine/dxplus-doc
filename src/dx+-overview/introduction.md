@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Introduction
 
 DX+ is a multipurpose test, measurement, analysis, and reporting platform created for use in the aerospace and mechanical engineering industries with additional application in general purpose data acquisition.

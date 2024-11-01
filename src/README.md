@@ -21,11 +21,15 @@ layout:
 
 # APEX DX+
 
+<div align="left">
+
+<figure><img src=".gitbook/assets/DX+_blue@300x.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
 ### A multipurpose test, measurement, analysis, and reporting platform
 
 ***
-
-<figure><img src=".gitbook/assets/Designer&#x26;Viewer(topBottom)skinny (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Jump right in ⬇️
 
