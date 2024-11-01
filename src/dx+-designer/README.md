@@ -14,20 +14,16 @@ layout:
 
 # DX+ DESIGNER
 
-<figure>
-<a href="https://apexturbine.gitbook.io/phoenix-documentation">
-<img src="../.gitbook/assets/DX+Designer.png" alt="">
-</a>
-<figcaption><p>The DX+ Design Elements are powered by APEX Phoenix Components</p>
-</figcaption>
-</figure>
+[![DX+ Design Elements](../.gitbook/assets/DX+Designer.png)](https://apexturbine.gitbook.io/phoenix-documentation)
 
+*The DX+ Design Elements are powered by APEX Phoenix Components*
 
 <div data-full-width="false">
 
-<a href="https://apexturbine.gitbook.io/phoenix-documentation">
-<figure><img src="../.gitbook/assets/2024-11-01-1730476913 (926x91).png" alt=""><figcaption><p>Click the image or the link below for Phoenix Components documentation</p></figcaption></figure>
-</a>
+[![Phoenix Components Documentation](../.gitbook/assets/2024-11-01-1730476913%20(926x91).png)](https://apexturbine.gitbook.io/phoenix-documentation)
+
+*Click the images or the link above for Phoenix Components documentation*
+
 
 </div>
 
