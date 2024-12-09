@@ -12,12 +12,12 @@ layout:
     visible: true
 ---
 
-# Quick Start Guide
+# Quick Start & Overview - VTI Device
 
 The Quick Start Guide is available as&#x20;
 
-1. [a video guide](quick-start-guide.md#id-1.-quick-start-video) or&#x20;
-2. [a step-by-step guide with text & screenshots](quick-start-guide.md#id-2.-step-by-step-text-and-screenshot-guide)
+1. [a video guide](quick-start-and-overview-vti-device.md#id-1.-quick-start-video) or&#x20;
+2. [a step-by-step guide with text & screenshots](quick-start-and-overview-vti-device.md#id-2.-step-by-step-text-and-screenshot-guide)
 
 ## 1. Quick Start Video:
 
