@@ -20,7 +20,7 @@ layout:
 
 ***
 
-## 2025.13 (released 2025-04-04)
+## 2025.15 (released 2025-04-15)
 
 * Updated Installer
   * Added ability to select individual devices, processors, outputs, etc. for installation
