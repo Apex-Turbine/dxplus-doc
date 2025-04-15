@@ -31,4 +31,4 @@ layout:
 * Receive DS streams
 * Receive from and configure hardware devices
 * Write to databases
-* Set up DX+ Publisher/Subscribers
+* Set up DX+ Transmit/Receive

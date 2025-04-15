@@ -24,26 +24,38 @@ layout:
 
 * Updated Installer
   * Added ability to select individual devices, processors, outputs, etc. for installation
+* Separated and Named Apps Based on Functionality
+  * DX+ Data Acquisition
+  * DX+ Analysis
+  * DX+ File Viewer
+  * DX+ Remote Viewer
 * Plotting Updates
   * Added Plot Selector Dialog
   * Added Signal vs. Signal capability for Time, History & Strip plots
 * New Designer Elements
   * Input
     * Audio Input
-    * Cyres Subscriber
+    * Cyres
     * Scanivavle Device
     * Apex-H5 (offline mode)
     * CADDMAS-H5 (offline mode)
   * Output
-    * Apex-H5
+    * Apex-H5 (HDF5)
 * Updated Designer Elements
   * FFT & DFT elements have been combined
     * "Mode" option enables switching between FFT & DFT
+  * Tach element settings now support digital and analog trigger options 
   * Added Help tab to element settings panels to easily reference documentation about elements & API
+* Renamed Items
+  * DX+ Subscriber Element -> Receive Element
+  * DX+ Publisher Element -> Transmit Element
+  * Peak Processor Element -> Adv. DSP Element
+  * Apex DX+ Subscriber Connection (Viewer) -> DX+Net Receiver
+  * Time Plot -> Scope Plot
 * Fixed Bugs
   * Plot Functionality
     * Plot Auto Axis scaling not working
-    * Ribbon Axis min/max doesn't allow large numbers
+    * Ribbon Axis min/max doesn't correctly handle steady state values
     * Bar plot cannot perform remove trace / clear traces
     * Unable to pick points / place markers on Bar Plots
     * Legend Settings are not applied when Legend Type is set to Internal
@@ -82,6 +94,14 @@ layout:
     * Octave Plots X Axis Does Not Show All Values
     * Plot Options are too tall for 1080p screen
     * Plot Spaces cannot be Deselected if All Spaces are Selected
+    * DX+ Peaks element produces no graphable data
+    * Strip Chart Y-axis not auto scaling for P2A Signal
+    * Saved viewer page with History plot doesn't load X axis range
+    * Order FFT Campbell vs P(N) can freeze during load
+    * Campbell Slow down issue over long duration
+    * Freq Sweep Sim drops out occasionally
+    * Zmod - Similar issues to Campbell (Plotting scatter)
+    * Peak Processor Chan. # does not update with a new file in RWX - resets to 0
   * User Interface
     * Component Settings and Streams tabs can disappear or overlap
     * File menu not wide enough to show filenames
@@ -92,7 +112,7 @@ layout:
     * Bar plot buttons missing icons
     * DX+ Plot Pages window can obscure the Save Successful dialog
     * DX+ File>Open error message isn't descriptive
-    * Subscriber DX can incorrectly stop/start Publisher DX
+    * DX+ Receive can incorrectly stop/start DX+ Transmit 
     * Submitting Design with Existing Plots Enables Plot Playback Slider
     * DX Plus about dialog missing logo
     * Plot placement during multiplot creation places plots in different order than the tree
@@ -121,6 +141,7 @@ layout:
     * Trigger Processing Settings Allow negative threshold
     * Octave Banks and Statistics Channel Issues when connecting
     * Avg Statistic Not Returning Expected Results
+    * Tach processor not working as expected
   * File Management
     * Pressing "Cancel" on save design window still opens file selection
     * Open Design with DataSim Error
@@ -134,6 +155,7 @@ layout:
     * Saving Plot Layouts does not work
   * Other Issues
     * When an error occurs on start, the DAQ should call stop
+    * DAQ is sometimes uninitialized after Submit Design and going to Viewer
     * Datastore records with -1 timestamps showing
     * X Axis should be static time windows for History and Time Plots
     * Updates need to occur per page
@@ -154,7 +176,7 @@ layout:
   * Design Operations
     * Crash when creating plot pages from DS Receiver
     * Crash when clicking Submit while design is saving
-    * Crash when clicking Publisher output element after submitting design
+    * Crash when clicking Transmit output element after submitting design
     * Crash after doing New Design and trying to Remove outputs
     * Crash when clearing unsaved design when changing from DAQ to Offline mode
     * Crash on close - offline mode
@@ -169,6 +191,10 @@ layout:
     * DX+ crashes on failed setup
     * Crash with RWX Simulator and "Parameter" history plot
     * Crash in Start/Stop operations
+    * Crash - DX+ Remote Viewer crashes without Crash Reporter when store unreachable
+    * DX+ Viewer - Closing DX+ Receive - App becomes unresponsive
+    * DX+ Viewer - DX+ Receive doesn't handle invalid URI
+    * DX+ DAQ - Unable to submit design infinite loop with no timeout
   * Plot Management
     * Crash when opening old plot setup file
     * Crash when deleting Campbell plot
@@ -199,6 +225,8 @@ layout:
     * Deleting components doesn't delete properly
     * Stream Tags Ignore Disabled Elements causing crash
     * Crash when removing connection
+    * Component Manager Sorting Issue Returns resulting in Invalid design
+    * Rev Resample setting for PPR defaults to 0 until clicked
   * Application Lifecycle
     * Viewer becomes unresponsive and must be force quit
     * DX+ Crashing on Close

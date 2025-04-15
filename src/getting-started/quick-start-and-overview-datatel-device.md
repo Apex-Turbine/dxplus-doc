@@ -88,7 +88,7 @@ Next we will add an output element to view the data
 Other outputs are also available
 
 * SQLite Database - allows you to store the data to disk
-* DX+ Publisher - allows you to publish data onto the network which can be seen by the DX+ Standalone Viewer
+* DX+ Transmit - allows you to publish data onto the network which can be seen by the DX+ Standalone Viewer
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/FFT.png" alt=""><figcaption></figcaption></figure>
