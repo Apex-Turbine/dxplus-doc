@@ -69,6 +69,6 @@ layout:
 - **FFT Implementation** - FFT Zoom and FFT Overlap do not currently match DX and DS in methodology
 - **PTP Time Sync** - Address case of PTP with no Master: MeCalc showing 1970
 
-#### Notes
+## Notes
 * Please report any new issues to Apex @ [https://users.apexturbine.com/](https://users.apexturbine.com/)
 * Regular updates will be provided as issues are resolved.
