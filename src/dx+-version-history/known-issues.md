@@ -29,7 +29,7 @@ layout:
 
 ### Viewer Issues
 - **Y2 Axis Display Problem** - Y2 axis doesn't appear in plot options and changing values in ribbon doesn't work
-- **HDF5 Format Limitations** - DX+Viewer can only play back a limited number of plots at a time from APEX-H5 files before significant slowdown
+- **HDF5 Format Limitations** - DX+ Viewer can only play back a limited number of plots at a time from APEX-H5 files before significant slowdown
   - Apex still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
 - **Campbell Plot Display Delay** - Delay in Campbell plot displaying graph in DX+ Offline/Viewer through SQLite file - plots may need to be maximized to update
 - **Time/History Plot Duration Issues** - SQLite Data Store (DX+ Viewer) - Time/History Plots durations run past their length
@@ -46,7 +46,7 @@ layout:
 - **Plot Space Selection Issue** - 1 Trace Per option not available for multi-space selection unless all spaces selected
 - **Missing Bar Charts from Peaks** - DX+ Bar Charts created from Peaks do not show up
 - **Channel Tree Organization** - Unselected channels in the Viewer element still appear in Viewer tree
-- **Transmit/Receieve Organization** - Propagated channels do not remain organized by processing type in Viewer tree
+- **Transmit/Receive  Organization** - Propagated channels do not remain organized by processing type in Viewer tree
 
 ### Core Functionality Issues
 - **Included Streams Propagation** - "Included Streams" do not propagate to Statistics or Octave elements
