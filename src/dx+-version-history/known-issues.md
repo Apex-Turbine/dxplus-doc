@@ -22,7 +22,7 @@ layout:
 
 **Last Updated:** April 15, 2025
 
-## List of Known Issues
+## List of Known Issues for version 2025.15
 
 ### Documentation Issues
 - **Documentation may not contain up-to-date screenshots** - and some buttons, features, and text may have changed or been removed
@@ -69,6 +69,6 @@ layout:
 - **FFT Implementation** - FFT Zoom and FFT Overlap do not currently match DX and DS in methodology
 - **PTP Time Sync** - Address case of PTP with no Master: MeCalc showing 1970
 
-## Notes
+## Reporting Issues
 * Please report any new issues to Apex @ [https://users.apexturbine.com/](https://users.apexturbine.com/)
 * Regular updates will be provided as issues are resolved.
