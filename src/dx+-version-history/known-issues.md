@@ -22,12 +22,12 @@ layout:
 
 **Last Updated:** April 15, 2025
 
-### List of Known Issues
+## List of Known Issues
 
-## Documentation Issues
+### Documentation Issues
 - **Documentation may not contain up-to-date screenshots** - and some buttons, features, and text may have changed or been removed
 
-## Viewer Issues
+### Viewer Issues
 - **Y2 Axis Display Problem** - Y2 axis doesn't appear in plot options and changing values in ribbon doesn't work
 - **HDF5 Format Limitations** - DX+Viewer can only play back a limited number of plots at a time from APEX-H5 files before significant slowdown
   - Apex still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
@@ -48,7 +48,7 @@ layout:
 - **Channel Tree Organization** - Unselected channels in the Viewer element still appear in Viewer tree
 - **Transmit/Receieve Organization** - Propagated channels do not remain organized by processing type in Viewer tree
 
-## Core Functionality Issues
+### Core Functionality Issues
 - **Included Streams Propagation** - "Included Streams" do not propagate to Statistics or Octave elements
 - **Designer-Viewer Transition** - DX+ must be restarted when unable to return to viewer to stop DAQ under certain circumstances
 - **MeCalc Performance** - MeCalc device takes a very long time to save, load, and process
@@ -59,16 +59,16 @@ layout:
 - **Notes Badge Display** - Notes Badge still shows when note information gets cleared
 - **Strip Chart Behavior** - Strip Chart Y-axis label and trace change to match History plot on design resubmission
 
-## Data Processing Issues
+### Data Processing Issues
 - **FFT Limit Application** - Issues can occur with limit application to FFT when limit range starts at 0
 - **Filter Selection Problems** - Order Filter has issues with selecting filter for RPM input
 - **Filter Output Quality** - Order Filter can have output discontinuities
 - **Unit Propagation** - EU Scalar Units not propagated downstream
 
-## Technical Issues
+### Technical Issues
 - **FFT Implementation** - FFT Zoom and FFT Overlap do not currently match DX and DS in methodology
 - **PTP Time Sync** - Address case of PTP with no Master: MeCalc showing 1970
 
-### Notes
+#### Notes
 * Please report any new issues to Apex @ [https://users.apexturbine.com/](https://users.apexturbine.com/)
 * Regular updates will be provided as issues are resolved.
