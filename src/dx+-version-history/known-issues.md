@@ -20,7 +20,7 @@ layout:
 
 </div>
 
-**Last Updated:** April 15, 2025
+**Last Updated:** April 16, 2025
 
 ## List of Known Issues for version 2025.15
 
@@ -47,6 +47,7 @@ layout:
 - **Missing Bar Charts from Peaks** - DX+ Bar Charts created from Peaks do not show up
 - **Channel Tree Organization** - Unselected channels in the Viewer element still appear in Viewer tree
 - **Transmit/Receive  Organization** - Propagated channels do not remain organized by processing type in Viewer tree
+- **LED Graphic Plot Orientation** - Orientation setting in dialog shows "Horizontal" when saved setting is "Vertical" - making changes to other LED settings will require user to re-select "Vertical" if that is the desired orientation
 
 ### Core Functionality Issues
 - **Included Streams Propagation** - "Included Streams" do not propagate to Statistics or Octave elements
