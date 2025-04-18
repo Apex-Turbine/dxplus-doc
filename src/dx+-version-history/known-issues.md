@@ -48,6 +48,7 @@ layout:
 - **Channel Tree Organization** - Unselected channels in the Viewer element still appear in Viewer tree
 - **Transmit/Receive  Organization** - Propagated channels do not remain organized by processing type in Viewer tree
 - **LED Graphic Plot Orientation** - Orientation setting in dialog shows "Horizontal" when saved setting is "Vertical" - making changes to other LED settings will require user to re-select "Vertical" if that is the desired orientation
+- **Analog Trigger Tach causing plotting hangup on Campbell** - issue is present after RPM reaches Max Speed. Issue is not present when using Digital Trigger setting in Tach element
 
 ### Core Functionality Issues
 - **Included Streams Propagation** - "Included Streams" do not propagate to Statistics or Octave elements
