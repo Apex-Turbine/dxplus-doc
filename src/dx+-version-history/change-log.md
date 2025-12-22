@@ -60,6 +60,7 @@ layout:
     * Viewing page > all ribbons have updated icons
     * Viewing page > added tabs for video and model
     * Installer page UI/UX improvements
+
 * Fixed Bugs:
   * Apex Licesense Manager and Installer Fixes
     * 1613 failure with ALM on first startup/initial install.
@@ -69,6 +70,8 @@ layout:
     * 2085 Fixed various installer and Apex License Manager issues, including errors during installation, problems launching the license manager, and license application inconsistencies.
   * User Interface Fixes
     * 1431 Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
+    * 1493 Updated all references to Mecalc to use correct branding.
+    * 1871 Clear button would previously be disabled when loading a design; now enabled.
   * Plotting Fixes
     * 1075 Campbell indexing issue with displaying OrderFFT data.
     * 1377 Campbell plot hang with analog trigger tach.
@@ -98,6 +101,15 @@ layout:
     * 1582 Text plots would appear in arbitrary order when dragged form viewer tree, now they maintain correct order.
     * 1650 XY plots would not save or restore selected data components for the x/y axes, causing incorrect plot outputs after reload.
     * 1432 Marker arrows in DX+ Viewer would not scale correctly when plots where maximized.
+    * 1461 Loading a Speed Campbell plot and dropping an FFT channel without speed did not revert the plot to a Time Campbell; Y2 axis incorrectly remained as engine orders.
+    * 1463 First Plot would appear black and grid colors would be incorrectwhen loading plots with other styles enabled.
+    * 1582 Text plots would appear in arbitrary order when dragged from Viewer tree, now plots maintain correct order.
+    * 1044 Propagated channels in Publisher/Subscriber mode would not remain organized by processing type.
+    * 1166 Z-axis range arrows would disappear in Zmod and Campbell plots when range limit was reached; the correct arrow is now disabled instead.
+    * 1370 Y2 axis would not appear in plot options and changes in the ribbon would not take efftect.
+    * 1963 ZMod images appeared offset when exported or printed.
+    * 1990 IIR Processor default frequency would not update correctly when switching filter types.
+
   * Performance Fixes
     * 1219 DX+ would be unresponsive when submitting a design as DAQ was running.
     * 1230 Pulling setup from device or DS overwrites previously enabled/disabled items.
@@ -121,9 +133,13 @@ layout:
     * 2096 Entering decimal numbers was previously difficult in EU Scalar and similar entry elements.
     * 1591 Page status no longer remains when DX+ is closed.
     * 1603 DX+ Viewer's ribbon button no longer changes locations when window size changes.
-    * 1626 Ram usage previously would sometimes show incorrect values
+    * 1626 Ram usage previously would sometimes show incorrect values.
     * 1628 Data Simulator would not load parametter or speed streams correctly, preventing the viewer from enabling.
-    *
+    * 1449 Input components now correctly save and load all available streams, not just selected ones.
+    * 1464 Unselected channels in the Viewer component were appearing in plotting tree, now only selected channels are shown.
+    * 1279 Viewer used system time as initial timestamp, now uses oldest message time as the reference.
+
+
 
 
 
