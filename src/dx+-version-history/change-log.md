@@ -72,6 +72,7 @@ layout:
     * 1431 Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
     * 1493 Updated all references to Mecalc to use correct branding.
     * 1871 Clear button would previously be disabled when loading a design; now enabled.
+
   * Plotting Fixes
     * 1075 Campbell indexing issue with displaying OrderFFT data.
     * 1377 Campbell plot hang with analog trigger tach.
@@ -138,10 +139,6 @@ layout:
     * 1449 Input components now correctly save and load all available streams, not just selected ones.
     * 1464 Unselected channels in the Viewer component were appearing in plotting tree, now only selected channels are shown.
     * 1279 Viewer used system time as initial timestamp, now uses oldest message time as the reference.
-
-
-
-
 
 ## 2025.15 (released 2025-04-15)
 
