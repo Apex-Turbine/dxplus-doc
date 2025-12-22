@@ -19,7 +19,7 @@ layout:
 ## Versions
 
 ***
-## 2025.51 (released 2025-12-17)
+## 2025.51 (released 2025-12-??)
 
 * New Features
   * Video Input added
@@ -72,8 +72,11 @@ layout:
     * 1431 Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
     * 1493 Updated all references to Mecalc to use correct branding.
     * 1871 Clear button would previously be disabled when loading a design; now enabled.
+    * 2168 Scrollbars in the designer page would not appear unless the side panel was collapsed.
 
   * Plotting Fixes
+    * 1695 Offline playback plots now display the current time during file playback.
+    * 2184 Previously, plots played at maximum speed and only showed the first 10 seconds of data; All time-based plots now play at correct speed and duration during file playback. 
     * 1075 Campbell indexing issue with displaying OrderFFT data.
     * 1377 Campbell plot hang with analog trigger tach.
     * 1846 Using absolute time wouldn't show date/time with point selection.
@@ -104,7 +107,6 @@ layout:
     * 1432 Marker arrows in DX+ Viewer would not scale correctly when plots where maximized.
     * 1461 Loading a Speed Campbell plot and dropping an FFT channel without speed did not revert the plot to a Time Campbell; Y2 axis incorrectly remained as engine orders.
     * 1463 First Plot would appear black and grid colors would be incorrectwhen loading plots with other styles enabled.
-    * 1582 Text plots would appear in arbitrary order when dragged from Viewer tree, now plots maintain correct order.
     * 1044 Propagated channels in Publisher/Subscriber mode would not remain organized by processing type.
     * 1166 Z-axis range arrows would disappear in Zmod and Campbell plots when range limit was reached; the correct arrow is now disabled instead.
     * 1370 Y2 axis would not appear in plot options and changes in the ribbon would not take efftect.
@@ -139,6 +141,7 @@ layout:
     * 1449 Input components now correctly save and load all available streams, not just selected ones.
     * 1464 Unselected channels in the Viewer component were appearing in plotting tree, now only selected channels are shown.
     * 1279 Viewer used system time as initial timestamp, now uses oldest message time as the reference.
+    * 2181 Designs now fully save when saving and closing a design simultaneously.
 
 ## 2025.15 (released 2025-04-15)
 
