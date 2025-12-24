@@ -19,6 +19,121 @@ layout:
 ## Versions
 
 ***
+## 2025.52.23 (released 2025-12-23)
+
+* New Features
+  * Video Input added
+    * Added support for video input in plots, allowing video from file, datastore, or live recorder, with time-synced display alongside sensor data.
+  * Model and Simulation integration added
+    * Adding ability to enable the use of simulation data and models within DX+ for analysis and visualization.
+  * Pull setup button will highlight when changes were applied that require pull setup to be re-clicked
+  * Added support for IRIG timing signals
+  * Clicking submit design automatically takes user to the Viewer page
+  * Plotting:
+    * Scatter plot added
+    * Tracking plot added
+    * Bar plot added
+    * Reset data button added to plot options for relative plots
+    * Plot Linking added to plot tools ribbon
+    * Y-axis offset option added for visual stacking
+    * The ability to place Markers/Cursor sticks on the Y-axis. 
+    * Auto title feature added to plot options, automatically on
+
+  * New Designer Elements
+    * Inputs
+      * DewesoftNet
+    * Processors
+      * Stream Selection
+      * Time Aligner
+      * Signal Math
+      * Static Fit
+      * Mode Fit
+    * Outputs
+      * DATX File Writer
+      * RWX File Writer
+      * Model Transmit
+      * Model Viewer
+      * IDDS Transmitter
+  * UI Changes:
+    * All designer elements have updated icons
+    * Designer page > all ribbons have updated icons
+    * Viewer page > all ribbons have updated icons
+    * Viewer page > added tabs for video and model
+    * Installer page UI/UX improvements
+
+* Fixed Bugs:
+  * Apex License Manager and Installer Fixes
+    * Failure with ALM on first startup/initial install.
+    * Failure with ALM on restart.
+    * ALM crash when license server is down.
+    * Switching to License Server when there isn't one caused various issues.
+    * Fixed various installer and Apex License Manager issues, including errors during installation, problems launching the license manager, and license application inconsistencies.
+
+  * User Interface Fixes
+    * Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
+    * Updated all references to Mecalc to use correct branding.
+    * Clear button would previously be disabled when loading a design; now enabled.
+    * Scrollbars in the designer page would not appear unless the side panel was collapsed.
+
+  * Plotting Fixes
+    * Offline playback plots now display the current time during file playback.
+    * Previously, plots played at maximum speed and only showed the first 10 seconds of data; All time-based plots now play at correct speed and duration during file playback. 
+    * Campbell indexing issue with displaying OrderFFT data.
+    * Campbell plot hang with analog trigger tach.
+    * Using absolute time wouldn't show date/time with point selection.
+    * Plot settings dialog would not display when activated through context menu.
+    * Plot options dialog would not open after resubmit.
+    * Plot settings would not work when the page was popped-out.
+    * Starting and stopping DAQ, all Campbell plot peaks would appear at speed 0 until the plot is reloaded, randomly would occur.
+    * Issue would occur when displaying time vs time data with FFT's Campbell plot.
+    * Disabled channels in offline mode still appeared in the Viewer tree.
+    * XY-plots had misaligned time between time based traces.
+    * Plot export(print) would previously not show graphic plots.
+    * Gauge Values for tach2 and tach3 would previously display unstable/rapid changing decimal values.
+    * Tabulated plot windows would not close when quitting DX+.
+    * Right clicking on a plot and selecting "tabulate" would cause a crash.
+    * Cursors could previously not be moved; improved cursor selection, dragging, and context menu responsiveness for all cursor types.
+    * Pointer tool is now selected by default.
+    * Clearing markers now updates the plot immediately.
+    * Graphic plot labels now have improved scaling and performance.
+    * Text plots would appear in arbitrary order when dragged from viewer tree, now they maintain correct order.
+    * XY plots would not save or restore selected data components for the x/y axes, causing incorrect plot outputs after reload.
+    * Marker arrows in DX+ Viewer would not scale correctly when plots were maximized.
+    * Loading a Speed Campbell plot and dropping an FFT channel without speed did not revert the plot to a Time Campbell; Y2 axis incorrectly remained as engine orders.
+    * First Plot would appear black and grid colors would be incorrect when loading plots with other styles enabled.
+    * Propagated channels in Publisher/Subscriber mode would not remain organized by processing type.
+    * Z-axis range arrows would disappear in Zmod and Campbell plots when range limit was reached; the correct arrow is now disabled instead.
+    * Y2 axis would not appear in plot options and changes in the ribbon would not take effect.
+    * ZMod images appeared offset when exported or printed.
+    * IIR Processor default frequency would not update correctly when switching filter types.
+
+  * Performance Fixes
+    * DX+ would be unresponsive when submitting a design as DAQ was running.
+    * Pulling setup from device or DS overwrites previously enabled/disabled items.
+    * Data Simulator unselected channels appeared in the viewer.
+    * Selecting stale Viewer elements or channels from removed components caused crash.
+    * Octave Band design did not function correctly until the pull setup process was completed.
+    * Activating QAquire button through a released package would cause a crash.
+    * Multiple inputs into the Rev Resample would cause streams to not be correctly selected nor propagated.
+    * Limits would not save when using Data Simulator.
+    * Errors with Sqlite input data would cause application freeze.
+    * Added more error handling to ensure errors were getting reported to users.
+    * Error messages would not appear after first popup has happened.
+    * Designs with errors would not show errors until design was opened twice.
+    * Processing would continue after a setup error, error is now shown to the user.
+    * If a design was submitted and resulted in an error but was fixed then resubmitted, the design would continue to not work.
+    * Deleting plots would sometimes cause a crash.
+    * Re-submitting DS designs would occasionally cause a crash.
+    * SQLite input would periodically buffer the longer it played.
+    * Entering decimal numbers was previously difficult in EU Scalar and similar entry elements.
+    * Page Status window no longer remains open when DX+ is closed.
+    * DX+ Viewer's expand ribbon button no longer changes locations when window size changes.
+    * Ram usage previously would sometimes show incorrect values.
+    * Data Simulator would not load parameters or speed streams correctly, preventing the viewer from enabling.
+    * Input components now correctly save and load all available streams, not just selected ones.
+    * Unselected channels in the Viewer component were appearing in plotting tree, now only selected channels are shown.
+    * Viewer used system time as initial timestamp, now uses oldest message time as the reference.
+    * Designs now fully save when saving and closing a design simultaneously.
 
 ## 2025.15 (released 2025-04-15)
 
