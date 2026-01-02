@@ -33,6 +33,8 @@ layout:
 - **Trace order issues in plot options** - Reordering traces in the plot options traces tab may not work as expected, especially with multiple graphic text displays.
 - **Graphic plot PDF export issues** - Exported PDFs of Text and Gauge graphic plots may have unreadable text due to white backgrounds, and plot spaces may turn gray when exporting.
 - **Plots durations run past their length** - The time and history plots in the SQLite Data Store (DX+ Viewer) start at the beginning of play, but the duration continues after the data display ends.
+- **Clicking Campbell plots does not highlight the parameters** - When clicking on Campbell plots, only the signal is highlighted in the Viewer tree; associated parameters are not highlighted.
+
 
 ### Viewer Issues
 - **HDF5 playback limited plots** - DX+ Viewer release can only play back limited plots at a time from HDF5 files (limit may vary by machine).
