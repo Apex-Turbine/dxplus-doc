@@ -48,7 +48,6 @@ layout:
 - **Time-sync button** - When switching from DAQ to Offline Mode by loading an offline design, the time-sync button in the Viewer may not enabled.
 - **Multiple error dialogs** - Opening an old design with element creation errors shows a separate error dialog for each issue.
 - **Drag-and-drop stops working** - When the plot selector dialog is open in DX+, drag-and-drop operations may stop working until the dialog is closed.
-- **Graphic plot PDF export issues** - Exported PDFs of Text and Gauge graphic plots may have unreadable text due to white backgrounds, and plot spaces may turn gray when exporting.
 - **Incorrect 'Reference Domain' setting does not error and prevents Viewer tree display** - If an incorrect 'Reference Domain' is set (e.g., Pressure instead of Time), no error is shown and the Viewer tree is not produced. Correcting the setting allows the design to load as expected.
 - **"Reading File" progress window** - When an incorrect file type or an SQLite file with no streams is selected, the "Reading File" progress window may remain open after the "No streams found in the selected file" dialog is closed.
 - **Expanding some plots causes overlap** - Expanding certain graphic plots can result in them overlapping other plots in the Viewer.
