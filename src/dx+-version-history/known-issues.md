@@ -20,19 +20,58 @@ layout:
 
 </div>
 
-**Last Updated:** April 18, 2025
-
-## List of Known Issues for version 2025.15
+**Last Updated:** January 1, 2025
+## List of Known Issues for version 2025.52.13
 
 ### Documentation Issues
 - **Documentation may not contain up-to-date screenshots** - and some buttons, features, and text may have changed or been removed
 
+### Plot Issues
+- **User Interaction pauses other Tests** - When running tests alongside the Campbell Plot, interacting with the plot can cause other tests to pause briefly before resuming.
+- **Campbell Plot memory usage** - If DAQ is started with Campbell Plots present but no rig running, memory usage continuously increases as data is buffered. Starting the rig or removing Campbell Plots resolves the issue.
+- **Plots background turns gray when loading plot setup file** - Loading a plot setup file for Campbell (and sometimes scatter plots) can cause the background to turn gray. This may also occur when resubmitting a design.
+- **Trace order issues in plot options** - Reordering traces in the plot options traces tab may not work as expected, especially with multiple graphic text displays.
+- **Graphic plot PDF export issues** - Exported PDFs of Text and Gauge graphic plots may have unreadable text due to white backgrounds, and plot spaces may turn gray when exporting.
+- **Plots durations run past their length** - The time and history plots in the SQLite Data Store (DX+ Viewer) start at the beginning of play, but the duration continues after the data display ends.
+
+### Viewer Issues
+- **HDF5 playback limited plots** - DX+ Viewer release can only play back limited plots at a time from HDF5 files (limit may vary by machine).
+  - Apex still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
+- **Disabled element in HDF5 Output causes errors on write** - Input or processor elements that are unselected in HDF5 output can cause write errors for HDF5 files.
+- **Background image options delayed from Ribbon** - When selecting background image options from the ribbon, the change does not take effect until a mouse move or click.
+- **Viewer streams duplicated** - Opening the same design multiple times in the Viewer can result in duplicate data streams being displayed.
+- **Design marked as modified when opened** - Opening a design may immediately mark it as modified, even if no changes have been made.
+- **Clear All Pages button** - In the DX+ File Viewer, the "Clear All Pages" button remains disabled until a second page is created.
+- **Idle CPU usage with dynamic update** - Creating plots before starting DAQ can cause DX+ to use 5-10% CPU due to dynamic updates. Starting and stopping DAQ resolves the issue.
+- **Time-sync button** - When switching from DAQ to Offline Mode by loading an offline design, the time-sync button in the Viewer may not enabled.
+- **Multiple error dialogs** - Opening an old design with element creation errors shows a separate error dialog for each issue.
+- **Drag-and-drop stops working** - When the plot selector dialog is open in DX+, drag-and-drop operations may stop working until the dialog is closed.
+- **Graphic plot PDF export issues** - Exported PDFs of Text and Gauge graphic plots may have unreadable text due to white backgrounds, and plot spaces may turn gray when exporting.
+- **Incorrect 'Reference Domain' setting does not error and prevents Viewer tree display** - If an incorrect 'Reference Domain' is set (e.g., Pressure instead of Time), no error is shown and the Viewer tree is not produced. Correcting the setting allows the design to load as expected.
+- **"Reading File" progress window** - When an incorrect file type or an SQLite file with no streams is selected, the "Reading File" progress window may remain open after the "No streams found in the selected file" dialog is closed.
+- **Expanding some plots causes overlap** - Expanding certain graphic plots can result in them overlapping other plots in the Viewer.
+
+### Model Issues
+- **Zone Visibility Issue in SDR Models** – Deselecting Zones does not hide the corresponding Zone as expected.
+- **Loading bars do not appear for model loading** - When loading models, progress/loading bars are not displayed.
+- **Model does not load with previously active solution** - When opening a saved model, the solution that was active at the time of saving is not automatically loaded.
+- **SDRs do not properly interpolate color contours between vertices** - Some SDR models, especially those using quadratic or nonlinear cells, may not interpolate color contours correctly between vertices, resulting in incorrect coloring of intermediate points.
+
+### Video Issues
+- **Multiple webcam instances not supported** - DX+ cannot handle multiple instances of the same webcam. Limiting to one device should resolve the issue.
+- **Video always opens too small with Absolute Layout enabled** - When Absolute Layout is enabled, video opens at a smaller size than expected.
+- **Crash when deleting plots before resources finish loading** - Deleting a video plot before its resources (such as webcam drivers) have finished loading can cause a crash due to race conditions and dangling references.
+
+### Technical Issues
+- **DX+ launch lag** - On new installations, DX+ may take several seconds or minutes to launch. The splash screen does not appear until after loading procedures are complete.
+- **DAQ tab displayed in Offline Mode for old designs** - Opening a design intended for Online mode while in Offline mode may incorrectly display the DAQ tab, even though only processing of Input elements should be available.
+
+
+## List of Known Issues for version 2025.15
+
 ### Viewer Issues
 - **Y2 Axis Display Problem** - Y2 axis doesn't appear in plot options and changing values in ribbon doesn't work
-- **HDF5 Format Limitations** - DX+ Viewer can only play back a limited number of plots at a time from APEX-H5 files before significant slowdown
-  - Apex still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
 - **Campbell Plot Display Delay** - Delay in Campbell plot displaying graph in DX+ Offline/Viewer through SQLite file - plots may need to be maximized to update
-- **Time/History Plot Duration Issues** - SQLite Data Store (DX+ Viewer) - Time/History Plots durations run past their length
 - **Grid Clipping on Window Resize** - Viewer grids become clipped when window resized too small
 - **Text Scaling Issues** - Text on Graphic Plots (Text, Thermometer, LED) does not always scale correctly
 - **Clear Button Functionality** - Clear button does not clear cursors
