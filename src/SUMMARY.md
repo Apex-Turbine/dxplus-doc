@@ -8,6 +8,8 @@
   * [Installing & Licensing](getting-started/installing-and-licensing.md)
   * [Quick Start & Overview - VTI Device](getting-started/quick-start-and-overview-vti-device.md)
   * [Quick Start & Overview - Datatel Device](getting-started/quick-start-and-overview-datatel-device.md)
+* [DX+ DAQ](dx+-daq/README.md)
+  * [Tabular](https://apexturbine.gitbook.io/apex-dx+-daq-documentation/)
 * [DX+ DESIGNER](dx+-designer/README.md)
   * [Components](https://apexturbine.gitbook.io/phoenix-documentation)
 * [DX+ VIEWER](dx+-viewer/README.md)
