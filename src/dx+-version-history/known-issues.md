@@ -20,7 +20,23 @@ layout:
 
 </div>
 
-**Last Updated:** April 18, 2025
+**Last Updated:** May 25, 2026
+
+## List of Known Issues for version 2026.21.25
+
+### Viewer Issues
+- **Solution Fit Data Selectors** - Data selectors for Solution Fit data do not show the expected fit data and critical location options, and label data components by units rather than by what the data represents
+- **Pages Tab Bar Persistence** - The pages tab bar does not persist across submissions
+- **Clear Plot Docks Button** - The "Clear Plot Docks" button remains enabled even when no items are in the plot docks
+- **Plot Dock Append Duplication** - Appending a plot setup with saved dock plots duplicates those plots with each append
+- **Tracking Plot Trace Labels** - Tracking plot traces do not include an EO label (or other identifier) for tracking
+
+### Core Functionality Issues
+- **Offline Analysis File Load Cancel Crash** - Selecting a file then cancelling while it is loading can crash Offline Analysis
+- **RWX File in Stream Selection Crash** - Attempting to load an RWX file into the Stream Selection element can crash Offline Analysis (only SQLite files are supported)
+- **Data Sim Traces Require Clearing All Errors** - A design with Data Sim alongside other elements does not produce Data Sim traces until all errors are cleared
+- **Slow Submit Setup in Table Setup** - Submitting a setup in the table setup process can occasionally take a long time
+- **Rapid Submit Design Issues** - Opening and submitting designs in quick succession in DX+ Analysis can cause issues, such as the submit button getting stuck spinning after cancelling a long submit, or false "Submit In Progress" / "Finishing model load" warnings
 
 ## List of Known Issues for version 2025.15
 
