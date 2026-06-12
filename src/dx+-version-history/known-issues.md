@@ -27,8 +27,8 @@ layout:
 ### Viewer Issues
 - **Solution Fit Data Selectors** - Data selectors for Solution Fit data do not show the expected fit data and critical location options, and label data components by units rather than by what the data represents
 - **Tracking Plot Trace Labels** - Tracking plot traces do not include an EO label (or other identifier) for tracking
-- **File Playback Max Speed Crash** - DX+ crashes when playing back files at maximum speed with a phoenix error
-- **Tach Icon Missing from Viewer Tree** - The Tach icon does not appear in the Viewer Tree
+- **File Playback Max Speed Crash** - DX+ can sometime crash when playing back files at maximum speed
+- **Tach Icon Missing from Viewer Tree** - The Tach processor's icon does not appear in the Viewer Tree
 - **Grid Size 1x1 Unavailable for Single Plot** - Unable to change grid size to 1x1 when only one plot is present in the first space
 - **Loaded Plot Setups Cause Playback Lag** - Loaded plot setups cause lag during file playback
 
