@@ -19,6 +19,66 @@ layout:
 ## Versions
 
 ***
+## 2026.21.25 (released 2026-05-25)
+
+* New Features
+  * New DX+ Data Acquisition application with a tabular setup process. See the [DX+ DAQ documentation](https://apexturbine.gitbook.io/apex-dx+-daq-documentation/).
+    * New virtual device that lets users configure their setups and plots before connecting to a device.
+  * Relative Phase compute added for Campbell and general phase plots
+  * Viewer Tree:
+    * Added a sort option to sort by channel or by processor (previous default)
+    * Filter text box moved to the top of the panel
+  * Plotting:
+    * Plot setups can now be loaded onto designs they were not originally created with
+    * Scatter plot trace settings now allow entering an X-axis position value, defaulting to the index value
+  * New Designer Elements
+    * Processors
+      * Relative Phase
+
+* Fixed Bugs:
+  * User Interface Fixes
+    * Pull Setup badges now display without clicking the element
+    * Fixed SQLite output icon size discrepancy and output dock scrollbar visibility
+    * Fixed multiple component icons not appearing in the Viewer tree
+    * Fixed pop-out button being disabled for an existing page right after popping out another page
+    * Fixed ribbon collapsing when changing a combo box while in "show only" mode
+    * Fixed the last/only item in the outputs dock not showing stream count
+    * Offline Analysis status bar file path is now left-aligned with item order matching DX/DX+
+    * Designer slider and spin box no longer appear in the Viewer
+  * Plotting Fixes
+    * Improved plot setup loading reliability
+    * Graphic Plot now offers only the Text option when the item type is text
+    * Fixed error when plotting Mecalc Health Stats as graphic plots
+    * Fixed error when starting DAQ with a Scope plot of a Mecalc channel
+    * Fixed error when starting DAQ with a text plot of a health stat
+    * Fixed plot-wide settings not applying to traces added at plot creation (e.g., History plot time window)
+    * Fixed crash when dropping a text-type health channel onto a plot
+    * Fixed Scope plot being selectable for data types it does not support
+    * Fixed video/plot sync using relative time instead of the linked timestamp
+    * Fixed Campbell/ZMod Z-axis range getting stuck in "Auto" mode
+    * Fixed crash when enabling "Edit Layout" after loading an absolute layout file
+    * Fixed crash when using sliders after a File Viewer plot load where traces failed to load
+  * Performance Fixes
+    * Submitting a design that still requires Pull Setup now reports an error
+    * Fixed RWX/DATX File Writer crash at start when "Record at Start" was toggled
+    * Fixed error when processing a .db file in DX+ Analysis
+    * Fixed error when opening a model in a 1x1 grid while a model was present but the grid space was not selected
+    * Fixed error when clicking the FFT element
+    * Fixed crash when submitting a design with an uninitialized DS element
+    * Fixed crash when quickly starting and resizing the window while a model is loading
+    * Fixed disabled streams being re-enabled when loading a design (EU Scalar)
+    * Fixed crash when deleting a resource-bound plot (e.g., video plot) before its resources finished loading
+    * Fixed error when scrolling the Stream Selection "Type" combo box with a Cyres database loaded
+    * Fixed event number incrementing twice when stopping an event and stopping recording
+    * Fixed crash when dragging an element from the ribbon onto the Designer
+    * Fixed crash when submitting a Tunnel D database design in Offline Analysis
+    * Fixed crash when closing the program right after starting it in Online Analysis
+    * Fixed Statistics component stat selection not being retained when saving/loading
+    * Fixed Tach settings not being saved to the design file
+    * Fixed crash when submitting a design while a model is still loading in the Viewer
+    * Fixed crash when starting DAQ a second time
+
+***
 ## 2025.52.23 (released 2025-12-23)
 
 * New Features

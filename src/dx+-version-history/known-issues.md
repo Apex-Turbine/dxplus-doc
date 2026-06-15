@@ -20,7 +20,23 @@ layout:
 
 </div>
 
-**Last Updated:** April 18, 2025
+**Last Updated:** May 25, 2026
+
+## List of Known Issues for version 2026.21.25
+
+### Viewer Issues
+- **Solution Fit Data Selectors** - Data selectors for Solution Fit data do not show the expected fit data and critical location options, and label data components by units rather than by what the data represents
+- **Tracking Plot Trace Labels** - Tracking plot traces do not include an EO label (or other identifier) for tracking
+- **File Playback Max Speed Crash** - DX+ can sometime crash when playing back files at maximum speed
+- **Tach Icon Missing from Viewer Tree** - The Tach processor's icon does not appear in the Viewer Tree
+- **Grid Size 1x1 Unavailable for Single Plot** - Unable to change grid size to 1x1 when only one plot is present in the first space
+- **Loaded Plot Setups Cause Playback Lag** - Loaded plot setups cause lag during file playback
+
+### Core Functionality Issues
+- **RWX File in Stream Selection Crash** - Attempting to load an RWX file into the Stream Selection element can crash Offline Analysis (only SQLite files are supported)
+- **Slow Submit Setup in Table Setup** - Submitting a setup in the table setup process can occasionally take a long time
+- **Rapid Submit Design Issues** - Opening and submitting designs in quick succession in DX+ Analysis can cause issues, such as the submit button getting stuck spinning after cancelling a long submit, or false "Submit In Progress" / "Finishing model load" warnings
+- **IIR Filter Order Parameter Default Value** - IIR filter order parameter reverts to default value (6) when reopening the filtering settings panel, even after saving a different value
 
 ## List of Known Issues for version 2025.15
 
