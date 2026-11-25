@@ -6,20 +6,24 @@
 
 ## System Overview & Capabilities
 
-```text
-+-----------------------------------------------------------------------------------+
-|                                  DX+ DB Manager                                   |
-|                                                                                   |
-|  [SQLite / .dxdb / PostgreSQL] <---> [Phoenix Engine] <---> [.rwx / .datx Files]  |
-|                                             |                                     |
-|           +---------------------------------+                                     |
-|           v                                 v                                     |
-|  [32,768-Bin Envelope Plotter & ROI]  [Import, Export & Maintenance Suite]        |
-|  - 10M+ point waveforms smoothly      - Strict Columnar CSV (timestamp_irig)      |
-|  - Subsecond ROI Event creation       - DATX & RWX partitioned file export        |
-|  - UTC & IRIG tooltip formatting      - Same-DB & Cross-DB record merging         |
-|  - Typed JSON event metadata editor   - Time offsets, event trim, Vacuum & SQL    |
-+-----------------------------------------------------------------------------------+
+```mermaid
+flowchart TD
+    subgraph Inputs["Telemetry Databases & Binary Files"]
+        DB["SQLite (.dxdb / .dxdb.index) & PostgreSQL"]
+        FILES["Binary Containers (.rwx / .datx / .datx_index)"]
+    end
+
+    ENGINE["DX+ DB Manager<br/>(Phoenix Engine)"]
+
+    subgraph Capabilities["Interactive Visualization, Export & Maintenance"]
+        PLOT["32,768-Bin Envelope Plotter & ROI<br/>• Smooth 10M+ sample waveforms<br/>• Subsecond ROI event creation<br/>• UTC & IRIG tooltips + JSON metadata"]
+        TOOLS["Import, Export & Maintenance Suite<br/>• Strict columnar CSV (timestamp_irig)<br/>• Partitioned .datx / .rwx / .dxdb export<br/>• Record merge, time offset, trim, Vacuum & SQL"]
+    end
+
+    DB <--> ENGINE
+    FILES <--> ENGINE
+    ENGINE --> PLOT
+    ENGINE --> TOOLS
 ```
 
 ### Supported Adapters
