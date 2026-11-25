@@ -11,7 +11,7 @@ Supported 64-bit Windows versions:
 
 ### Linux Services (64-bit)
 
-- **Apex License Manager (`ApexLM` / `apexlm.service` & `apexlm-server.service`)** runs identically on 64-bit Linux distributions with **systemd**, alongside Python/Qt6 Phoenix services and CLI utilities where deployed on Linux hosts.
+- **APEX License Manager (`ApexLM` / `apexlm.service` & `apexlm-server.service`)** runs identically on 64-bit Linux distributions with **systemd**, alongside Python/Qt6 Phoenix services and CLI utilities where deployed on Linux hosts.
 
 ---
 

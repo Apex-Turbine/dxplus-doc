@@ -1,6 +1,6 @@
 # Release Notes & Version History
 
-![dxplus logo](images/dxplus-logo.png)
+![DX+ Logo](../images/dxplus-logo-dark.svg)
 
 See the following sections for detailed release history and active advisories:
 

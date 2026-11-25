@@ -1,8 +1,11 @@
 # APEX DX+ Documentation
 
-![APEX DX+ Logo](images/dxplus-logo.png)
+![APEX DX+ Logo](images/dxplus-logo-dark.svg)
 
 **APEX DX+** is a multi-purpose platform for high-speed data acquisition, real-time streaming signal processing, post-test engineering analysis, live remote monitoring, and industrial protocol bridging. Built on the native **Phoenix** C++20 processing engine and Qt 6 desktop applications, DX+ stores telemetry in open **SQLite (`.dxdb`)** and **PostgreSQL** databases alongside industry-standard binary file formats (`.datx`, `.rwx`, `.pkx`, `.h5`).
+
+> [!TIP]
+> New to DX+? Follow the **[APEX DX+ Quick Start Guide](quick-start.md)** to set up **ApexLM**, acquire and stream channels in `DX+ DAQ`, view live data, and inspect runs in `DX+ Data Viewer`.
 
 ---
 

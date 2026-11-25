@@ -1,6 +1,6 @@
 # Introduction
 
-**DX+** is a multi-purpose test, measurement, analysis, and reporting platform created by **APEX Turbine Testing Technologies** for aerospace, turbomachinery, and general mechanical engineering testing and data acquisition.
+**DX+** is a multi-purpose test, measurement, analysis, and reporting platform created by **APEX Testing Technologies** for aerospace, turbomachinery, and general mechanical engineering testing and data acquisition.
 
 ![DX+ Designer above and DX+ Viewer below](images/designer-viewer-overview.png)
 *DX+ Designer (top) and DX+ Viewer (bottom): build acquisition and processing pipelines and monitor live or recorded data in customizable multi-page plots.*

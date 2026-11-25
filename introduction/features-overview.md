@@ -1,6 +1,6 @@
 # Features Overview
 
-![APEX DX+ Logo](images/dxplus-logo.png)
+![APEX DX+ Logo](../images/dxplus-logo-dark.svg)
 
 ## Data Acquisition & Sources
 

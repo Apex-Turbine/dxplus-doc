@@ -2,7 +2,7 @@
 
 #### 1.Definitions
 
-1.1. APEX means Apex Turbine Testing Technologies, Inc., a company incorporated under the laws of the state of Tennessee in the United States of America.
+1.1. APEX means APEX Testing Technologies, Inc., a company incorporated under the laws of the state of Tennessee in the United States of America.
 
 1.2. CUSTOMER means the person or organization purchasing or using APEX Software and Licensed
 

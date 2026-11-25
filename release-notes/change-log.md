@@ -1,6 +1,6 @@
 # Change Log
 
-![dxplus logo](images/dxplus-logo.png)
+![DX+ Logo](../images/dxplus-logo-dark.svg)
 
 ## Versions
 
@@ -108,12 +108,12 @@
     * Installer page UI/UX improvements
 
 * Fixed Bugs:
-  * Apex License Manager and Installer Fixes
+  * APEX License Manager and Installer Fixes
     * Failure with ALM on first startup/initial install.
     * Failure with ALM on restart.
     * ALM crash when license server is down.
     * Switching to License Server when there isn't one caused various issues.
-    * Fixed various installer and Apex License Manager issues, including errors during installation, problems launching the license manager, and license application inconsistencies.
+    * Fixed various installer and APEX License Manager issues, including errors during installation, problems launching the license manager, and license application inconsistencies.
 
   * User Interface Fixes
     * Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
@@ -211,7 +211,7 @@
   * DX+ Subscriber Element -> Receive Element
   * DX+ Publisher Element -> Transmit Element
   * Peak Processor Element -> Adv. DSP Element
-  * Apex DX+ Subscriber Connection (Viewer) -> DX+Net Receiver
+  * APEX DX+ Subscriber Connection (Viewer) -> DX+Net Receiver
   * Time Plot -> Scope Plot
 * Fixed Bugs
   * Plot Functionality
@@ -324,7 +324,7 @@
     * Trace settings changed in ribbon don't apply until plot options are opened
   * Performance Issues
     * DAQ Control Not Hiding in Offline Analysis Mode
-    * Apex Data Simulator stream badge updating incorrectly
+    * APEX Data Simulator stream badge updating incorrectly
     * License Manager token count incorrect with Statistics streams
     * Page numbering doesn't return to zero
     * Recording indicated with no DB filename defined

@@ -1,6 +1,6 @@
 # Known Issues
 
-![dxplus logo](images/dxplus-logo.png)
+![DX+ Logo](../images/dxplus-logo-dark.svg)
 
 **Last Updated:** May 25, 2026
 
@@ -28,7 +28,7 @@
 ### Viewer Issues
 - **Y2 Axis Display Problem** - Y2 axis doesn't appear in plot options and changing values in ribbon doesn't work
 - **HDF5 Format Limitations** - DX+ Viewer can only play back a limited number of plots at a time from APEX-H5 files before significant slowdown
-  - Apex still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
+  - APEX still recommends SQLite format for performance reasons and direct compatibility with file viewing and post processing
 - **Campbell Plot Display Delay** - Delay in Campbell plot displaying graph in DX+ Offline/Viewer through SQLite file - plots may need to be maximized to update
 - **Time/History Plot Duration Issues** - SQLite Data Store (DX+ Viewer) - Time/History Plots durations run past their length
 - **Grid Clipping on Window Resize** - Viewer grids become clipped when window resized too small
@@ -70,5 +70,5 @@
 - **PTP Time Sync** - Address case of PTP with no Master: MeCalc showing 1970
 
 ## Reporting Issues
-* Please report any new issues to Apex @ [https://users.apexturbine.com/](https://users.apexturbine.com/)
+* Please report any new issues to APEX @ [https://users.apexturbine.com/](https://users.apexturbine.com/)
 * Regular updates will be provided as issues are resolved.

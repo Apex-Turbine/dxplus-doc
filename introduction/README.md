@@ -2,7 +2,7 @@
 
 ![DX+ Installer](images/installer.png)
 
-Use the guides in this section to understand the **DX+** architecture, verify system requirements, install and license the software with **Apex License Manager (ApexLM)**, and walk through your first acquisition and viewing session.
+Use the guides in this section to understand the **DX+** architecture, verify system requirements, install and license the software with **APEX License Manager (ApexLM)**, and walk through your first acquisition and viewing session.
 
 ## In This Section
 
