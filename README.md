@@ -1,5 +1,8 @@
 # APEX DX+ Documentation
 
+> [!NOTE]
+> DX+ licensing is managed by **[APEX License Manager](../License%20Manager/README.md)** (`ApexLM`); legacy FlexNet (`lmgrd`) will be discontinued in **October 2027**. For hardware (`x86-64` + **AVX2**), 18-month version support, and end-user license terms, see **[Software Release Policies](../Release%20Policies/README.md)**.
+
 ![APEX DX+ Logo](images/dxplus-logo-dark.svg)
 
 **APEX DX+** is a multi-purpose platform for high-speed data acquisition, real-time streaming signal processing, post-test engineering analysis, live remote monitoring, and industrial protocol bridging. Built on the native **Phoenix** C++20 processing engine and Qt 6 desktop applications, DX+ stores telemetry in open **SQLite (`.dxdb`)** and **PostgreSQL** databases alongside industry-standard binary file formats (`.datx`, `.rwx`, `.pkx`, `.h5`).

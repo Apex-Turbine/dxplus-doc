@@ -1,4 +1,7 @@
-# Legal & Licensing Notices
+# Legal
+
+> [!NOTE]
+> See **[Software Release Policies](../../Release%20Policies/README.md)**, **[Maintenance & Technical Support](../../Release%20Policies/maintenance-and-support.md)**, and **[Software License Agreement](../../Release%20Policies/software-license-agreement.md)** for full APEX enterprise release, support, and non-commercial end-user software/API/format licensing policies. & Licensing Notices
 
 This section contains third-party software attributions, end-user licensing terms, and software maintenance policies governing **APEX DX+**.
 

@@ -55,7 +55,7 @@ dx+plc.exe --config "C:\configs\dxnet_plc_bridge_config.json" --tray
 
 ### Licensing
 
-- Checked out via `PhoenixLic` at launch (`app_name = "plc"`, `primary_feature = "plc-bridge-app"`). Verify your **ApexLM** service grants PLC bridge access; see [Installing & Licensing](../../introduction/installing-and-licensing.md).
+- Checked out via `PhoenixLic` at launch (`app_name = "plc"`, `primary_feature = "plc-bridge-app"`). Verify your **ApexLM** service grants PLC bridge access; see [Installing & Licensing](../../introduction/installing-and-licensing.md) and **[APEX License Manager](../../../License%20Manager/README.md)** (legacy FLEXlm discontinued **October 2027**).
 
 ---
 

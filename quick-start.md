@@ -1,5 +1,8 @@
 # APEX DX+ Quick Start Guide
 
+> [!NOTE]
+> Confirm your workstation meets **[System Requirements](../Release%20Policies/system-requirements.md)** (`x86-64` with **AVX2**) and has an active entitlement in **[APEX License Manager](../License%20Manager/README.md)** ([Quick Start](../License%20Manager/quick-start.md)). Legacy FlexNet (`lmgrd`) licensing ends in **October 2027**.
+
 This guide walks through verifying **APEX License Manager (ApexLM)**, configuring a live **DX+ DAQ** acquisition run, viewing live telemetry in **DX+ Remote Viewer**, running **DX+ Online / Offline Analysis** designs, and inspecting saved runs in **DX+ Data Viewer**.
 
 ---

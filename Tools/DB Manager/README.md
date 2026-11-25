@@ -46,7 +46,7 @@ flowchart TD
 dx+dbmanager.exe
 ```
 
-- **Licensing**: In **ApexLM**, DX+ DB Manager uses application token **`DBMANAGE`** and feature token **`DBMANAGE-APP`** (`app_name = "dbmanage"`, `primary_feature = "dbmanage-app"`; some legacy packages may reference `FOUNDRY-APP`). Ensure **ApexLM** is running and holds an active `DBMANAGE` entitlement; see [Installing & Licensing](../../introduction/installing-and-licensing.md).
+- **Licensing**: In **ApexLM**, DX+ DB Manager uses application token **`DBMANAGE`** and feature token **`DBMANAGE-APP`** (`app_name = "dbmanage"`, `primary_feature = "dbmanage-app"`; some legacy packages may reference `FOUNDRY-APP`). Ensure **ApexLM** is running and holds an active `DBMANAGE` entitlement; see [Installing & Licensing](../../introduction/installing-and-licensing.md) and **[APEX License Manager](../../../License%20Manager/README.md)** (legacy FLEXlm discontinued **October 2027**; database/file formats governed by the **[Software License Agreement](../../../Release%20Policies/software-license-agreement.md)**).
 
 ---
 

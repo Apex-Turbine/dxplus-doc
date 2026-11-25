@@ -1,4 +1,7 @@
-# Software License Agreement (SLA)
+# Software License Agreement
+
+> [!IMPORTANT]
+> For the current enterprise-wide **Software License Agreement** governing all APEX software, APIs/SDKs, and file/protocol formats (strictly internal end-user use; commercial use prohibited without explicit formal written authorization from APEX), see **[Software License Agreement](../../Release%20Policies/software-license-agreement.md)** under **[Software Release Policies](../../Release%20Policies/README.md)**. (SLA)
 
 #### 1.Definitions
 

@@ -1,4 +1,7 @@
-# Data Formats & Storage Architecture
+# Data Formats
+
+> [!IMPORTANT]
+> **End-User Format License Notice:** All APEX-provided file formats, database schemas, and streaming protocols are licensed strictly for internal end-user use with authorized APEX software and cannot be used for commercial means without explicit formal written authorization from APEX. See the **[Software License Agreement](../../Release%20Policies/software-license-agreement.md)**. & Storage Architecture
 
 **APEX DX+** supports open relational databases for fast indexed queries, sharded multi-file archives for high-throughput multi-rate recording, binary telemetry containers for compatibility with legacy and third-party tools, and JSON-based design/setup project files.
 

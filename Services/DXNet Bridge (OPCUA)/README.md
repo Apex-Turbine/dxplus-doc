@@ -50,7 +50,7 @@ flowchart LR
 
 ### Licensing
 
-- **ApexLM Entitlement**: Requires application token **`OPCUA`** and feature token **`OPCUA-BRIDGE-APP`** (`app_name = "opcua"`, `primary_feature = "opcua-bridge-app"`). See [Installing & Licensing](../../introduction/installing-and-licensing.md).
+- **ApexLM Entitlement**: Requires application token **`OPCUA`** and feature token **`OPCUA-BRIDGE-APP`** (`app_name = "opcua"`, `primary_feature = "opcua-bridge-app"`). See [Installing & Licensing](../../introduction/installing-and-licensing.md) and **[APEX License Manager](../../../License%20Manager/README.md)** (legacy FLEXlm discontinued **October 2027**).
 
 ---
 

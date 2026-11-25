@@ -1,5 +1,8 @@
 # System Requirements
 
+> [!NOTE]
+> For enterprise-wide APEX hardware, `x86-64` **AVX2**, RAM, operating system, and **18-month version lifecycle** policies, see **[System Requirements & OS Matrix](../../Release%20Policies/system-requirements.md)** and **[Software Release Policies](../../Release%20Policies/README.md)**.
+
 ## Operating System
 
 ### Windows Desktop Applications & Services (64-bit)

@@ -1,6 +1,10 @@
 # Installing & Licensing
 
-**APEX DX+** uses the **APEX License Manager (ApexLM / ALM)** for node-locked, floating network, and borrowed offline licensing across Windows and Linux systems.
+**APEX DX+** uses **[APEX License Manager (ApexLM)](../../License%20Manager/README.md)** (`APEX LM Daemon` and `APEX LM Server Daemon`) for node-locked, floating network, and reserved offline licensing across Windows and Linux systems.
+
+> [!WARNING]
+> **Legacy FLEXlm / FlexNet Discontinuation — October 2027**
+> Legacy licensing powered by **FLEXlm / FlexNet** (`lmgrd`, `lmtools`, `lmutil`, `.lic` files, and `27000@host` servers) will be **discontinued as of October 2027**. All APEX product versions going forward exclusively use **[APEX License Manager](../../License%20Manager/README.md)** (`ApexLM`), the **APEX LM Daemon (`ApexLM_Service`)**, and the **APEX LM Server Daemon (`ApexLM_Server_Service`)**.
 
 ---
 
@@ -9,53 +13,53 @@
 ![DX+ Installer](images/installer.png)
 *DX+ Windows Installer component selection*
 
-1. Run the DX+ installer executable on a 64-bit Windows 10 or Windows 11 workstation (administrator privileges required if installing system-wide services).
-2. Choose the **Installation Folder** (by default, core runtimes, plugins, `CrashReporter.exe`, and application executables install into `dx+/bin/`).
-3. Select the DX+ packages to install:
+1. Confirm your workstation meets **[System Requirements](../../Release%20Policies/system-requirements.md)** (`x86-64` CPU with mandatory **AVX2** support, Windows 10/11 or Windows Server).
+2. Run the DX+ installer executable on a 64-bit Windows workstation (administrator privileges required if installing system-wide services).
+3. Choose the **Installation Folder** (by default, core runtimes, plugins, `CrashReporter.exe`, and application executables install into `dx+/bin/`).
+4. Select the DX+ packages to install:
    - Core **DX+** runtime, **Devices**, **Processors**, and **Net & Storage** plugins
    - Domain applications (**DX+ DAQ**, **DX+ Online Analysis**, **DX+ Offline Analysis**, **DX+ Data Viewer**, **DX+ Remote Viewer**)
    - Supporting tools and bridges (**DX+ DB Manager**, **DXNet Bridge (OPC UA)**, **DXNet Bridge (PLC)**)
-4. Ensure **ApexLM** (the required license manager service and system-tray companion) is selected.
-5. Complete the installation. Launch applications from **Start → APEX DX+**.
+5. Ensure **ApexLM** (the required license manager service and system-tray companion `ApexLM_Tray`) is selected.
+6. Complete the installation. Launch applications from **Start → APEX DX+**.
 
 > [!NOTE]
-> Unhandled exceptions in any DX+ desktop application invoke `CrashReporter.exe` to generate a forensic `.rpt` log and minidump for support submission at [https://users.apexturbine.com/](https://users.apexturbine.com/).
+> Unhandled exceptions in any DX+ desktop application invoke `CrashReporter.exe` to generate a forensic `.rpt` log and minidump for support submission at [https://users.apexturbine.com/](https://users.apexturbine.com/) (see [Maintenance & Technical Support](../../Release%20Policies/maintenance-and-support.md)).
 
 ---
 
 ## Linux Service & Server Deployment
 
-On 64-bit Linux systems, **ApexLM** can run as an unmanaged foreground process or be generated and registered as a **systemd** unit (`apexlm.service` for local/passthrough workstations or `apexlm-server.service` for central floating license servers):
+On 64-bit Linux systems, **ApexLM** can run in the foreground (`ApexLM_Service` / `ApexLM_Server_Service`) or be registered as a **systemd** unit (`apexlm.service` for local/passthrough workstations or `apexlm-server.service` for central floating license servers) — see [Workstation & Server Setup](../../License%20Manager/setup-and-server.md) and the [CLI Reference](../../License%20Manager/cli-reference.md):
 
 ```bash
-# Run as root to generate /etc/systemd/system/apexlm.service
-sudo python apps/main_cli.py interactive
-ApexLM> service install
-ApexLM> service start
-ApexLM> service status
+# Run as root to install /etc/systemd/system/apexlm.service
+sudo ApexLM_CLI service install
+sudo ApexLM_CLI service start
+sudo ApexLM_CLI service status
 
-# Or for the floating License Server service (apexlm-server.service):
-sudo python apps/main_server_cli.py interactive
-ApexLM> service install
-ApexLM> service start
+# Or for the central APEX LM Server Daemon (apexlm-server.service):
+sudo ApexLM_Server_CLI service install
+sudo ApexLM_Server_CLI service start
+sudo ApexLM_Server_CLI service status
 ```
 
 | Environment | Local Service Database Path | Server Service Database Path |
 | :--- | :--- | :--- |
-| **Windows** | `C:\ProgramData\APEX\APEXLM\apexlm.db` *(fallback `%APPDATA%\APEX\APEXLM\apexlm.db`)* | `C:\ProgramData\APEX\APEXLM_Server\apexlm_server.db` *(fallback `%APPDATA%\APEX\APEXLM_Server\apexlm_server.db`)* |
+| **Windows** | `C:\ProgramData\APEX\ApexLM\apexlm.db` *(fallback `%APPDATA%\APEX\ApexLM\apexlm.db`)* | `C:\ProgramData\APEX\ApexLM_Server\apexlm_server.db` *(fallback `%APPDATA%\APEX\ApexLM_Server\apexlm_server.db`)* |
 | **Linux** | `/var/lib/apexlm/apexlm.db` *(fallback `~/.local/share/apexlm/apexlm.db`)* | `/var/lib/apexlm-server/apexlm_server.db` *(fallback `~/.local/share/apexlm-server/apexlm_server.db`)* |
 
 > [!TIP]
-> On Windows, running `service install`, `service start`, `service stop`, `service restart`, or `service uninstall` inside an **elevated** PowerShell `python apps/main_cli.py interactive` session manages the native `ApexLMService` (and `ApexLMServerService` via `apps/main_server_cli.py interactive`).
+> On Windows, running `ApexLM_CLI service install` / `start` / `stop` / `restart` / `uninstall` (or interactive mode) inside an **elevated** PowerShell prompt manages the native `ApexLMService` Windows service (and `ApexLMServerService` via `ApexLM_Server_CLI`).
 
 ---
 
 ## Managing Licenses with ApexLM
 
-**ApexLM** runs a background license service plus a **loopback-only embedded Web Admin UI** (no password or session token required; loopback reachability authorizes local administration) and an interactive CLI (`main_cli.py interactive`).
+**ApexLM** runs a background license service plus a **loopback-only embedded Web Admin UI** (no password or session token required; loopback reachability authorizes local administration) and the interactive/one-shot CLI (`ApexLM_CLI` / `ApexLM_Server_CLI`). See **[Web UI & Offline Reservations](../../License%20Manager/web-ui-and-reservations.md)** for full details.
 
 ![ApexLM System Tray Menu](images/alm-task-tray-menu.png)
-*Right-click the **A** icon in the Windows notification area and open **ApexLM** / **Open Configuration***
+*Right-click the **A** icon in the Windows notification area (`ApexLM_Tray`) and open **ApexLM** / **Open Configuration***
 
 ![ApexLM Configuration Window](images/alm-window.png)
 *ApexLM status, license loading, and active token checkout view*
@@ -63,17 +67,17 @@ ApexLM> service start
 ### Step-by-Step Activation (Workstation / Local License)
 
 1. Ensure the ApexLM service is running.
-2. Right-click the **A** icon in the system tray and choose **Open Configuration** (or navigate directly in a local browser to **`http://127.0.0.1:27887/`** for the local service, or **`http://127.0.0.1:27888/`** on a floating license server host; `/api/v1/ui` is also supported).
-3. In the **Overview / License** view, upload or browse to your Ed25519-signed **Format Version 2** license file (`.lic` / `.json`), or load it from the CLI:
+2. Right-click the **A** icon in the system tray and choose **Open Configuration** (or navigate directly in a local browser on loopback to **`http://127.0.0.1:27887/`** for the local service, or **`http://127.0.0.1:27888/`** locally/via SSH tunnel on a floating license server host; `/api/v1/ui` is also supported).
+3. In the **Overview** tab, upload or browse to your signed **Format Version 2** license file (`.lic` / `.json`), or load it from the CLI:
    ```text
-   ApexLM> set mode local
-   ApexLM> load file C:\path\to\license.json
+   ApexLM> setsrvmode LOCAL
+   ApexLM> loadlic C:\path\to\license.json
    ApexLM> status
    ```
 4. Once applied, licensed applications and feature pools immediately become active without restarting the service.
 
 > [!WARNING]
-> **Format Version 2 Requirement & Legacy Licensing:** ApexLM requires **Format Version 2** JSON license files signed with Ed25519 (host-bound to uppercase hexadecimal MAC addresses without separators, e.g. `00155D2B5AB4`, or wildcard `*`/`demo` for portable demo keys). Format Version 1 keys and legacy FlexNet (`lmgrd`) license files are **not accepted**; contact APEX support for an updated v2 key if migrating from legacy DX installations.
+> **Format Version 2 Requirement & Legacy Licensing:** ApexLM requires cryptographically signed **Format Version 2** JSON license files (host-bound to uppercase hexadecimal MAC addresses without separators, e.g. `00155D2B5AB4`, or wildcard `*`/`demo` for portable evaluation keys). Format Version 1 keys and legacy FlexNet (`lmgrd`) `.lic` files are **not accepted** by ApexLM; contact APEX support to issue updated Format Version 2 licenses ahead of the **October 2027** FlexLM discontinuation.
 
 ---
 
@@ -82,8 +86,8 @@ ApexLM> service start
 | Mode | Purpose | Bind Address & Port | Notes |
 | :--- | :--- | :--- | :--- |
 | **`LOCAL`** | Single workstation, offline node-locked license | `127.0.0.1:27884` (`APEXLM_PORT`) | Validates local license file against machine MAC addresses. |
-| **`PASSTHROUGH`** | Local proxy forwarding to a remote floating server | `127.0.0.1:27884` $\rightarrow$ `<Server IP>:27885` | Supports **borrowing** counted features & hardware serials offline for **up to 30 days**. |
-| **`SERVER`** | Central floating license server | `0.0.0.0:27885` (`APEXLM_SERVER_PORT`)<br>External listen `27886` (`APEXLM_SERVER_LISTEN`) | Rejects direct unproxied app clients; workstation clients connect via `PASSTHROUGH` or `APEXLM_HOST`/`APEXLM_PORT`. Admin UI stays restricted to `127.0.0.1:27888`. |
+| **`PASSTHROUGH`** | Local proxy forwarding to a remote floating server | `127.0.0.1:27884` $\rightarrow$ `<Server IP>:27886` (`APEXLM_SERVER_LISTEN`) | Supports **reserving** counted features & hardware serials offline for **up to 30 days** via the **Reserve** tab. |
+| **`SERVER`** | Central floating license server | Loopback `127.0.0.1:27885` (`APEXLM_SERVER_PORT`)<br>External listen `0.0.0.0:27886` (`APEXLM_SERVER_LISTEN`) | Rejects direct unproxied app clients; workstation clients connect via `PASSTHROUGH`. Admin UI stays restricted to `127.0.0.1:27888`. |
 
 ### Environment Variables
 
