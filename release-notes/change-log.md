@@ -1,0 +1,401 @@
+# Change Log
+
+![dxplus logo](images/dxplus-logo.png)
+
+## Versions
+
+***
+## 2026.21.25 (released 2026-05-25)
+
+* New Features
+  * New DX+ Data Acquisition application with a tabular setup process. See the [DX+ DAQ documentation](../DX+DAQ/README.md).
+    * New virtual device that lets users configure their setups and plots before connecting to a device.
+  * Relative Phase compute added for Campbell and general phase plots
+  * Viewer Tree:
+    * Added a sort option to sort by channel or by processor (previous default)
+    * Filter text box moved to the top of the panel
+  * Plotting:
+    * Plot setups can now be loaded onto designs they were not originally created with
+    * Scatter plot trace settings now allow entering an X-axis position value, defaulting to the index value
+  * New Designer Elements
+    * Processors
+      * Relative Phase
+
+* Fixed Bugs:
+  * User Interface Fixes
+    * Pull Setup badges now display without clicking the element
+    * Fixed SQLite output icon size discrepancy and output dock scrollbar visibility
+    * Fixed multiple component icons not appearing in the Viewer tree
+    * Fixed pop-out button being disabled for an existing page right after popping out another page
+    * Fixed ribbon collapsing when changing a combo box while in "show only" mode
+    * Fixed the last/only item in the outputs dock not showing stream count
+    * Offline Analysis status bar file path is now left-aligned with item order matching DX/DX+
+    * Designer slider and spin box no longer appear in the Viewer
+  * Plotting Fixes
+    * Improved plot setup loading reliability
+    * Graphic Plot now offers only the Text option when the item type is text
+    * Fixed error when plotting Mecalc Health Stats as graphic plots
+    * Fixed error when starting DAQ with a Scope plot of a Mecalc channel
+    * Fixed error when starting DAQ with a text plot of a health stat
+    * Fixed plot-wide settings not applying to traces added at plot creation (e.g., History plot time window)
+    * Fixed crash when dropping a text-type health channel onto a plot
+    * Fixed Scope plot being selectable for data types it does not support
+    * Fixed video/plot sync using relative time instead of the linked timestamp
+    * Fixed Campbell/ZMod Z-axis range getting stuck in "Auto" mode
+    * Fixed crash when enabling "Edit Layout" after loading an absolute layout file
+    * Fixed crash when using sliders after a File Viewer plot load where traces failed to load
+  * Performance Fixes
+    * Submitting a design that still requires Pull Setup now reports an error
+    * Fixed RWX/DATX File Writer crash at start when "Record at Start" was toggled
+    * Fixed error when processing a .db file in DX+ Analysis
+    * Fixed error when opening a model in a 1x1 grid while a model was present but the grid space was not selected
+    * Fixed error when clicking the FFT element
+    * Fixed crash when submitting a design with an uninitialized DS element
+    * Fixed crash when quickly starting and resizing the window while a model is loading
+    * Fixed disabled streams being re-enabled when loading a design (EU Scalar)
+    * Fixed crash when deleting a resource-bound plot (e.g., video plot) before its resources finished loading
+    * Fixed error when scrolling the Stream Selection "Type" combo box with a Cyres database loaded
+    * Fixed event number incrementing twice when stopping an event and stopping recording
+    * Fixed crash when dragging an element from the ribbon onto the Designer
+    * Fixed crash when submitting a Tunnel D database design in Offline Analysis
+    * Fixed crash when closing the program right after starting it in Online Analysis
+    * Fixed Statistics component stat selection not being retained when saving/loading
+    * Fixed Tach settings not being saved to the design file
+    * Fixed crash when submitting a design while a model is still loading in the Viewer
+    * Fixed crash when starting DAQ a second time
+
+***
+## 2025.52.23 (released 2025-12-23)
+
+* New Features
+  * Video Input added
+    * Added support for video input in plots, allowing video from file, datastore, or live recorder, with time-synced display alongside sensor data.
+  * Model and Simulation integration added
+    * Adding ability to enable the use of simulation data and models within DX+ for analysis and visualization.
+  * Pull setup button will highlight when changes were applied that require pull setup to be re-clicked
+  * Added support for IRIG timing signals
+  * Clicking submit design automatically takes user to the Viewer page
+  * Plotting:
+    * Scatter plot added
+    * Tracking plot added
+    * Bar plot added
+    * Reset data button added to plot options for relative plots
+    * Plot Linking added to plot tools ribbon
+    * Y-axis offset option added for visual stacking
+    * The ability to place Markers/Cursor sticks on the Y-axis. 
+    * Auto title feature added to plot options, automatically on
+
+  * New Designer Elements
+    * Inputs
+      * DewesoftNet
+    * Processors
+      * Stream Selection
+      * Time Aligner
+      * Signal Math
+      * Static Fit
+      * Mode Fit
+    * Outputs
+      * DATX File Writer
+      * RWX File Writer
+      * Model Transmit
+      * Model Viewer
+      * IDDS Transmitter
+  * UI Changes:
+    * All designer elements have updated icons
+    * Designer page > all ribbons have updated icons
+    * Viewer page > all ribbons have updated icons
+    * Viewer page > added tabs for video and model
+    * Installer page UI/UX improvements
+
+* Fixed Bugs:
+  * Apex License Manager and Installer Fixes
+    * Failure with ALM on first startup/initial install.
+    * Failure with ALM on restart.
+    * ALM crash when license server is down.
+    * Switching to License Server when there isn't one caused various issues.
+    * Fixed various installer and Apex License Manager issues, including errors during installation, problems launching the license manager, and license application inconsistencies.
+
+  * User Interface Fixes
+    * Page status section in the ribbon could be clipped at smaller window sizes in the DX+ Viewer.
+    * Updated all references to Mecalc to use correct branding.
+    * Clear button would previously be disabled when loading a design; now enabled.
+    * Scrollbars in the designer page would not appear unless the side panel was collapsed.
+
+  * Plotting Fixes
+    * Offline playback plots now display the current time during file playback.
+    * Previously, plots played at maximum speed and only showed the first 10 seconds of data; All time-based plots now play at correct speed and duration during file playback. 
+    * Campbell indexing issue with displaying OrderFFT data.
+    * Campbell plot hang with analog trigger tach.
+    * Using absolute time wouldn't show date/time with point selection.
+    * Plot settings dialog would not display when activated through context menu.
+    * Plot options dialog would not open after resubmit.
+    * Plot settings would not work when the page was popped-out.
+    * Starting and stopping DAQ, all Campbell plot peaks would appear at speed 0 until the plot is reloaded, randomly would occur.
+    * Issue would occur when displaying time vs time data with FFT's Campbell plot.
+    * Disabled channels in offline mode still appeared in the Viewer tree.
+    * XY-plots had misaligned time between time based traces.
+    * Plot export(print) would previously not show graphic plots.
+    * Gauge Values for tach2 and tach3 would previously display unstable/rapid changing decimal values.
+    * Tabulated plot windows would not close when quitting DX+.
+    * Right clicking on a plot and selecting "tabulate" would cause a crash.
+    * Cursors could previously not be moved; improved cursor selection, dragging, and context menu responsiveness for all cursor types.
+    * Pointer tool is now selected by default.
+    * Clearing markers now updates the plot immediately.
+    * Graphic plot labels now have improved scaling and performance.
+    * Text plots would appear in arbitrary order when dragged from viewer tree, now they maintain correct order.
+    * XY plots would not save or restore selected data components for the x/y axes, causing incorrect plot outputs after reload.
+    * Marker arrows in DX+ Viewer would not scale correctly when plots were maximized.
+    * Loading a Speed Campbell plot and dropping an FFT channel without speed did not revert the plot to a Time Campbell; Y2 axis incorrectly remained as engine orders.
+    * First Plot would appear black and grid colors would be incorrect when loading plots with other styles enabled.
+    * Propagated channels in Publisher/Subscriber mode would not remain organized by processing type.
+    * Z-axis range arrows would disappear in Zmod and Campbell plots when range limit was reached; the correct arrow is now disabled instead.
+    * Y2 axis would not appear in plot options and changes in the ribbon would not take effect.
+    * ZMod images appeared offset when exported or printed.
+    * IIR Processor default frequency would not update correctly when switching filter types.
+
+  * Performance Fixes
+    * DX+ would be unresponsive when submitting a design as DAQ was running.
+    * Pulling setup from device or DS overwrites previously enabled/disabled items.
+    * Data Simulator unselected channels appeared in the viewer.
+    * Selecting stale Viewer elements or channels from removed components caused crash.
+    * Octave Band design did not function correctly until the pull setup process was completed.
+    * Activating QAquire button through a released package would cause a crash.
+    * Multiple inputs into the Rev Resample would cause streams to not be correctly selected nor propagated.
+    * Limits would not save when using Data Simulator.
+    * Errors with Sqlite input data would cause application freeze.
+    * Added more error handling to ensure errors were getting reported to users.
+    * Error messages would not appear after first popup has happened.
+    * Designs with errors would not show errors until design was opened twice.
+    * Processing would continue after a setup error, error is now shown to the user.
+    * If a design was submitted and resulted in an error but was fixed then resubmitted, the design would continue to not work.
+    * Deleting plots would sometimes cause a crash.
+    * Re-submitting DS designs would occasionally cause a crash.
+    * SQLite input would periodically buffer the longer it played.
+    * Entering decimal numbers was previously difficult in EU Scalar and similar entry elements.
+    * Page Status window no longer remains open when DX+ is closed.
+    * DX+ Viewer's expand ribbon button no longer changes locations when window size changes.
+    * Ram usage previously would sometimes show incorrect values.
+    * Data Simulator would not load parameters or speed streams correctly, preventing the viewer from enabling.
+    * Input components now correctly save and load all available streams, not just selected ones.
+    * Unselected channels in the Viewer component were appearing in plotting tree, now only selected channels are shown.
+    * Viewer used system time as initial timestamp, now uses oldest message time as the reference.
+    * Designs now fully save when saving and closing a design simultaneously.
+
+## 2025.15 (released 2025-04-15)
+
+* Updated Installer
+  * Added ability to select individual devices, processors, outputs, etc. for installation
+* Separated and Named Apps Based on Functionality
+  * DX+ Data Acquisition
+  * DX+ Analysis
+  * DX+ File Viewer
+  * DX+ Remote Viewer
+* Plotting Updates
+  * Added Plot Selector Dialog
+  * Added Signal vs. Signal capability for Time, History & Strip plots
+* New Designer Elements
+  * Input
+    * Audio Input
+    * Cyres
+    * Scanivavle Device
+    * Apex-H5 (offline mode)
+    * CADDMAS-H5 (offline mode)
+  * Output
+    * Apex-H5 (HDF5)
+* Updated Designer Elements
+  * FFT & DFT elements have been combined
+    * "Mode" option enables switching between FFT & DFT
+  * Tach element settings now support digital and analog trigger options 
+  * Added Help tab to element settings panels to easily reference documentation about elements & API
+* Renamed Items
+  * DX+ Subscriber Element -> Receive Element
+  * DX+ Publisher Element -> Transmit Element
+  * Peak Processor Element -> Adv. DSP Element
+  * Apex DX+ Subscriber Connection (Viewer) -> DX+Net Receiver
+  * Time Plot -> Scope Plot
+* Fixed Bugs
+  * Plot Functionality
+    * Plot Auto Axis scaling not working
+    * Ribbon Axis min/max doesn't correctly handle steady state values
+    * Bar plot cannot perform remove trace / clear traces
+    * Unable to pick points / place markers on Bar Plots
+    * Legend Settings are not applied when Legend Type is set to Internal
+    * Plot information text box defaults to white, making it invisible on white plots
+    * Frequency Sweep Simulator Units not showing up
+    * Legend Font Size does not work
+    * Peaks output lags behind FFT
+    * Inconsistent Strip Chart behavior
+    * Trace Does Not Update with Axis on Playback Plots
+    * Plot Options Blank
+    * Auto and Half-Auto scaling having issues in some plots
+    * Viewer Not Loading Non-Datapoint Data
+    * Plot Setup Loading not working
+    * Campbell gets overwhelmed with FFT
+    * IIR Filters missing Filter Prototype Selection
+    * Limits Traces added/removed incorrectly
+    * Trace line colors missing from legend
+    * Strip Chart Shows 1969 absolute time
+    * WARN Level not applying for plot coloring (Always red)
+    * Plot Reload in Viewer is Slow
+    * Plot Settings Reset When New Design Submitted
+    * Orbit Plot Flashing
+    * FIR/IIR Filters auto-size determination not working
+    * Graphic Plots Display issues
+    * Time, History, and Strip Plots Show Same Trace
+    * Pan Tool Sticks to Plots
+    * Plots Cannot be Created from Peaks Output
+    * Hist and Strip auto ranges not working
+    * Strip Chart Slow
+    * Bar Plots not scaling correctly
+    * External Legend Issue
+    * Octave Bank Processor not Getting Correct Input Sampling Rates
+    * Cannot Create Multiple Speed Campbells
+    * Bar Plots Not Functional in Offline Analysis
+    * FFT Processor Sets Resolution instead of Block Size
+    * Octave Plots X Axis Does Not Show All Values
+    * Plot Options are too tall for 1080p screen
+    * Plot Spaces cannot be Deselected if All Spaces are Selected
+    * DX+ Peaks element produces no graphable data
+    * Strip Chart Y-axis not auto scaling for P2A Signal
+    * Saved viewer page with History plot doesn't load X axis range
+    * Order FFT Campbell vs P(N) can freeze during load
+    * Campbell Slow down issue over long duration
+    * Freq Sweep Sim drops out occasionally
+    * Zmod - Similar issues to Campbell (Plotting scatter)
+    * Peak Processor Chan. # does not update with a new file in RWX - resets to 0
+  * User Interface
+    * Component Settings and Streams tabs can disappear or overlap
+    * File menu not wide enough to show filenames
+    * Ribbon Popout buttons missing icons
+    * Viewer file menu says About DX+ incorrectly
+    * Pause buttons on playing plots reset to play icon when style changes
+    * Bar chart slider styled incorrectly
+    * Bar plot buttons missing icons
+    * DX+ Plot Pages window can obscure the Save Successful dialog
+    * DX+ File>Open error message isn't descriptive
+    * DX+ Receive can incorrectly stop/start DX+ Transmit 
+    * Submitting Design with Existing Plots Enables Plot Playback Slider
+    * DX Plus about dialog missing logo
+    * Plot placement during multiplot creation places plots in different order than the tree
+    * Plot Selection "Loses Focus" or becomes stuck
+    * Elements can be placed on top of each other
+    * Can't switch to Viewer/Designer in full screen mode
+    * DX+ File menu doesn't close after clicking an action
+    * All plots do not remain selected after '1 Trace Per' action
+    * Designer Ribbon Resizes Incorrectly
+    * Context Menu displaying incorrectly
+    * 'Remove Connection' option not working on components
+    * Usage Indicator not Showing in Ribbon
+    * Units missing in various displays
+  * Data Processing
+    * Issue with Tach Processor when Tachometer Level set to 0
+    * Tach Stream passed incorrectly from Rev Resample Element
+    * DX+ SQLite Input error issues
+    * Changing properties in elements doesn't mark design as changed
+    * Copy & Paste SQLite Input doesn't populate with streams
+    * Rev Resample Always Returns first Rev if PPR Less Than 1
+    * IIR Filter has no filter types
+    * Datatel Device not streaming slow data
+    * DS device stats not working
+    * Processor items connection issues
+    * EU Scalar Element needs way to specify Units
+    * Trigger Processing Settings Allow negative threshold
+    * Octave Banks and Statistics Channel Issues when connecting
+    * Avg Statistic Not Returning Expected Results
+    * Tach processor not working as expected
+  * File Management
+    * Pressing "Cancel" on save design window still opens file selection
+    * Open Design with DataSim Error
+    * Successfully saved designs won't load elements, only outputs
+    * Loading saved design not working
+    * DX+ "Submit Design" not enabled after opening a design
+    * DX+ File>New Design doesn't clear outputs
+    * Loading plots from saved plot layout doesn't apply limits
+    * Loading Designs does not load saved settings
+    * Edited names do not come back when loading saved design
+    * Saving Plot Layouts does not work
+  * Other Issues
+    * When an error occurs on start, the DAQ should call stop
+    * DAQ is sometimes uninitialized after Submit Design and going to Viewer
+    * Datastore records with -1 timestamps showing
+    * X Axis should be static time windows for History and Time Plots
+    * Updates need to occur per page
+    * Plot Slowness When Switching Pages
+    * Trace settings changed in ribbon don't apply until plot options are opened
+  * Performance Issues
+    * DAQ Control Not Hiding in Offline Analysis Mode
+    * Apex Data Simulator stream badge updating incorrectly
+    * License Manager token count incorrect with Statistics streams
+    * Page numbering doesn't return to zero
+    * Recording indicated with no DB filename defined
+    * Changing Design and Submit while system is running
+    * Outputs "Inputs" selections not reflected in "Streams" Tree
+    * Tree does not contain processed results when loading a design
+    * Num Connections on PSQL Output not keeping input value
+    * When deleting elements from canvas, they still appear in component list
+* Fixed Items for Improved Stability
+  * Design Operations
+    * Crash when creating plot pages from DS Receiver
+    * Crash when clicking Submit while design is saving
+    * Crash when clicking Transmit output element after submitting design
+    * Crash after doing New Design and trying to Remove outputs
+    * Crash when clearing unsaved design when changing from DAQ to Offline mode
+    * Crash on close - offline mode
+    * Crash during Offline Analysis
+    * Crash reordering traces in Trace Options Widget
+    * Crashes when Resubmitting twice in Offline Mode after Submitting in DAQ mode
+    * Crash on Close with DAQ Tab
+    * Crash when adding graphic plot when style is NULL
+    * Crash on failed setup
+    * Crash after failed licensing in RWX Reader
+    * Offline Analysis Crashes on Submit when there are no Streams
+    * DX+ crashes on failed setup
+    * Crash with RWX Simulator and "Parameter" history plot
+    * Crash in Start/Stop operations
+    * Crash - DX+ Remote Viewer crashes without Crash Reporter when store unreachable
+    * DX+ Viewer - Closing DX+ Receive - App becomes unresponsive
+    * DX+ Viewer - DX+ Receive doesn't handle invalid URI
+    * DX+ DAQ - Unable to submit design infinite loop with no timeout
+  * Plot Management
+    * Crash when opening old plot setup file
+    * Crash when deleting Campbell plot
+    * Crash when plotting too many signals
+    * Offline Mode Crash when Placing Multiple-Traces on Plots
+    * Axis Widget Causes Crash on some calls to Setup Axes
+    * Load Pages Slider Crash
+    * SQLInput Crash on old .dbs files
+    * Datatel Crash
+    * Crash when selecting Single Cursor on Campbell Plot
+    * Crash when adjusting Campbell Z Axis Threshold too fast
+    * Campbell Crashes on Color Phase mode after pressing delete
+    * Crash when clicking clear all plots
+    * Graphic Plot Element Right Click Plotsetup Crash
+    * Plot Setups Crash DX+
+    * Deleting Spectrum Plots Crashes Viewer
+    * Viewer Crashes when switching
+    * Removing Cells Reorders Plots + Crash
+    * Crash when deleting Plot Page and Navigating to DAQControl Page
+    * Crash when right-clicking on Plot Space After Plot Has Been Deleted
+    * Crash when right-clicking on Datatel stream count or IP address
+  * File Operations
+    * Standalone Viewer crashes when plotting data from a changing SQLite file
+    * Crash when switching to Viewer with no Viewer Element
+  * Element Management
+    * Copy/Paste Elements cause crash when connected
+    * Paste crashes the designer
+    * Deleting components doesn't delete properly
+    * Stream Tags Ignore Disabled Elements causing crash
+    * Crash when removing connection
+    * Component Manager Sorting Issue Returns resulting in Invalid design
+    * Rev Resample setting for PPR defaults to 0 until clicked
+  * Application Lifecycle
+    * Viewer becomes unresponsive and must be force quit
+    * DX+ Crashing on Close
+    * ALM crashes when applying demo license
+    * ALM shuts down after install even after clicking no on installer dialog
+    * Restart Button does not function in Crash Reporter
+    * ALM Install first launch error
+
+## 2024.39 (released 2024-09-30)
+
+* Initial release of DX+

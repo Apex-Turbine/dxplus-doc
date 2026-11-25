@@ -1,2 +1,0 @@
-# DAQ Control Tab
-

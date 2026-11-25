@@ -1,6 +1,0 @@
----
-hidden: true
----
-
-# QUICK TIPS
-

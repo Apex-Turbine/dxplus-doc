@@ -1,2 +1,0 @@
-# Other Ribbon Bar Controls
-
