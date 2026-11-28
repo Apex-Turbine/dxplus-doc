@@ -6,6 +6,7 @@ Use the guides in this section to understand the **DX+** architecture, verify sy
 
 ## In This Section
 
+- [APEX DX+ Quick Start Guide](../quick-start.md) — install DX+, verify licensing, and run your first acquisition, live view, and data review end to end.
 - [Introduction](introduction.md) — overview of the DX+ platform and its domain-split applications.
 - [Features Overview](features-overview.md) — summary of hardware interfaces, DSP processing, visualization, storage, and bridges.
 - [System Requirements](system-requirements.md) — operating system, CPU (AVX2), memory, graphics, and network port requirements.

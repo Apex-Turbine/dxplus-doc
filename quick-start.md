@@ -9,14 +9,53 @@ This guide walks through verifying **APEX License Manager (ApexLM)**, configurin
 
 ## Step 1: Install & Verify Licensing
 
-1. Run the DX+ installer for Windows or Linux ([System Requirements](introduction/system-requirements.md)).
+1. Run the DX+ installer for Windows or Linux ([System Requirements](introduction/system-requirements.md)). On Windows, follow the [Windows installer walkthrough](#windows-installer-walkthrough) below.
 2. Open the local **APEX License Manager** Web UI at `http://127.0.0.1:27887/` and confirm active seats for `DXPLUS`, `DX+DAQ`, `DX+ONLINEANALYSIS`, `DX+OFFLINEANALYSIS`, `DX+REMOTEVIEWER`, and `DX+DATAVIEWER` ([Installation & Licensing](introduction/installing-and-licensing.md)).
+
+### Windows Installer Walkthrough
+
+> [!NOTE]
+> If an older version is installed, remove it first: run `C:\Program Files\Apex\ApexMaintenanceTool.exe` and choose **Remove all components**.
+
+1. **Welcome**: click **Next**.
+
+    ![Installer — Welcome](images/install-1-welcome.jpg)
+    *Installer — Welcome*
+
+2. **Installation Folder**: keep `C:\Program Files\Apex` and click **Next**.
+
+    ![Installer — Installation Folder](images/install-2-folder.jpg)
+    *Installer — Installation Folder*
+
+3. **Select Components**: leave everything selected and click **Next**. **APEX License Manager** is always installed.
+
+    ![Installer — Select Components](images/install-3-components.jpg)
+    *Installer — Select Components*
+
+4. **License Agreement**: accept and click **Next**.
+5. **Start Menu Folder**: keep the default and click **Next**.
+6. **APEX License Manager Service Configuration**: choose **Install as a Windows Service (Recommended)** (requires administrator rights) or **Run as a Startup Application** (runs only while you are logged in).
+
+    ![Installer — License Manager Service Configuration](images/install-4-service.jpg)
+    *Installer — License Manager Service Configuration*
+
+7. **Installation Summary**: click **Install**, then **Finish**.
+
+    ![Installer — Installation Summary](images/install-5-summary.jpg)
+    *Installer — Installation Summary*
+
+Shortcuts are in the **Start menu** under **APEX DX+** and **APEX LM**. To add or remove components later, run `C:\Program Files\Apex\ApexMaintenanceTool.exe`.
+
 
 ---
 
 ## Step 2: Acquire & Record Live Data (`DX+ DAQ`)
 
-1. Launch **DX+ DAQ** ([DX+ DAQ Guide](DX+DAQ/README.md)).
+1. Launch **DX+ DAQ** ([DX+ DAQ Guide](DX+DAQ/README.md)). The first time you open DX+, accept the **License Agreement**.
+
+    ![DX+ DAQ main window](images/daq-main.jpg)
+    *DX+ DAQ main window*
+
 2. Open the **Devices** panel and add a physical hardware device (`Mecalc`, `Scanivalve`, `VTI`, `Datatel`, `NI`, `Pacific`, `HGL`, etc.) or select a **Simulator / Virtual Device** for testing ([Devices Reference](DX+DAQ/devices/README.md)).
 3. Configure channel calibration, EU scaling, filtering, FFT, and peak extraction directly in the tabular setup grid ([Table Operations](DX+DAQ/general/table-operations.md)).
 4. Enable outputs under **Outputs**:
