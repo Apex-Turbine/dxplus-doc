@@ -11,6 +11,7 @@ The toolbar above the table lets you scope and filter the visible rows:
 
 * **Source filter** *(left dropdown, defaults to "All")* — limits the table to streams from a single device, or shows all devices at once.
 * **Filter** *(textbox)* — narrows the table to rows whose values match the entered text.
+* **Enabled Only** *(toggle)* — hides disabled (unchecked) streams so only enabled streams are listed. While it's on, the stream count shows only the enabled streams.
 * **Check selected / Uncheck selected** *(top right)* — enables or disables the selected streams.
 * **Stream count** *(right)* — total number of streams in the table, including both enabled and disabled streams (`32` in the screenshot above).
 
@@ -37,14 +38,14 @@ Two visual cues help track unfinished wiring:
 
 The name users will see during testing (in the Viewer). Click any cell to rename a stream to something more meaningful (e.g. `bearing_accel_x` instead of `C1`).
 
-The button in the column header opens a **sequential rename** dialog: select multiple rows in the Logical Name column, click the header button, and apply a name + numbering pattern to all selected rows at once.
+The button in the column header opens a **sequential rename** dialog: select multiple cells in the Logical Name column, click the header button, and enter a name to apply to all selected rows at once. Include `%1` where the number should go — DX+ replaces it with `1`, `2`, `3`, … in row order. For example, `accel_%1` on four selected rows produces `accel_1`, `accel_2`, `accel_3`, and `accel_4`.
 
 > [!NOTE]
 > The Logical Name column accepts **paste from a Microsoft Excel spreadsheet** — copy a column of names from Excel and paste it into the Logical Name column to rename many streams in one operation.
 
 ### Classification
 
-Adds metadata classifications to a stream. Click a cell — or the button in the column header to apply across multiple selected rows — to open the **Edit Classification** dialog.
+Adds metadata classifications to a stream. Select one or more cells in the Classification column, then click the button in the column header to open the **Edit Classification** dialog.
 
 ![Edit Classification dialog](../images/daq-classification-window.png)
 *Edit Classification dialog*
@@ -58,7 +59,10 @@ Custom categories and values can be created from this dialog — you're not limi
 
 ### Range Limits
 
-Sets the expected range of each stream. Click a cell — or the button in the column header to apply across multiple selected rows — to open the **Range Limits** dialog:
+Sets the expected range of each stream. Double-click a cell — or select several cells in the column and click the button in the column header — to open the **Range Limits Settings** dialog:
+
+![Range Limits Settings dialog](../images/daq-range-limits.png)
+*Range Limits Settings dialog*
 
 * **Min Value / Max Value** — the lower and upper limits of the stream's range.
 * **Warn** — the percentage of the range at which a value is flagged as a warning.
@@ -69,7 +73,11 @@ For frequency-based limits, see [Freq Limits](ribbon.md#freq-limits) in the Ribb
 
 ### Raw Units, Filtering, Conversion, Spectral, Statistics
 
-These columns show the current processor settings for each stream. Use the button in each column header to open the processor's settings dialog, where edits apply to every selected row.
+These columns show the current processor settings for each stream. To change them:
+
+* **Raw Units, Filtering, Conversion** — double-click a cell to open the settings dialog for that stream.
+* **Any processor column** — select one or more cells in the column, then click the button in the column header. The dialog's settings apply to every selected cell.
+* **Spectral, Statistics** — use the column header button. Double-clicking a **Statistics** cell opens a quick checklist of the statistics for that stream instead of the full dialog.
 
 See the [Processors](../processors/README.md) section for the details of each processor:
 

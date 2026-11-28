@@ -8,7 +8,10 @@ A generic virtual device with a configurable number of output streams.
 
 ### Device Setup
 
-These fields appear both when first adding the device and when editing it later.
+These fields appear both when first adding the device and when editing it later. To edit them later, click the **Settings** button on the device in the [Devices / Sources](../general/devices-panel.md) panel, which opens **Device Setup - Virtual Device 1**.
+
+![Device Setup — Virtual Device](../images/daq-virtual-device-setup.png)
+*Device Setup — Virtual Device*
 
 * **Device Name** — display name for this device in the design. Defaults to `Virtual Device`, auto-incremented (`Virtual Device 1`, `Virtual Device 2`, …) when other Virtual Devices already exist.
 * **Stream Count** — number of output streams the device should produce.

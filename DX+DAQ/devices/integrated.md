@@ -21,6 +21,17 @@ At the top of the dialog is the **Connection** row.
 * **Locate** — pings/identifies the device on the network (typically by flashing an LED on the unit).
 * **Connect / Disconnect** — opens or closes the connection. Most fields below the Connection row are populated only once a connection is established.
 
+### Connection Failed
+
+If DX+ can't reach the device, a **Connection Failed** dialog appears:
+
+![Connection Failed dialog](../images/daq-connection-failed.png)
+*Connection Failed dialog*
+
+* **Show Details...** — shows the underlying connection error.
+* **Change IP Address** — returns to the Device Setup dialog so you can correct the address and try again.
+* **Create Virtual Device** — use this when the device is currently unavailable. DX+ creates a [Virtual Device](virtual.md) so you can configure the device's logical channels now and apply them to the hardware later (see [Convert Device to...](virtual.md#convert-device-to)).
+
 ### Device View (SVG)
 
 The right side of the dialog shows a scaled SVG render of the physical device. When you select a module or channel in the tables on the left, the corresponding port or slot on the SVG is highlighted, providing a visual link between the configuration UI and the physical hardware.

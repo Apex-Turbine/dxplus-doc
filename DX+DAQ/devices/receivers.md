@@ -19,7 +19,7 @@ Generates simulated APEX-format data streams for testing and demos.
 
 ## APEX DS Receiver
 
-Receives channels from an APEX DS (DSNet) source. Set the host/IP and port of the DS source; a DS password can be entered if one is required.
+Receives channels from an APEX DS (DSNet) source. Enter the **Address** and **Port** of the DS source (Port defaults to **Auto**), or click **Discover** to find it on the network. **Pull Setup** reads the source's channel list.
 
 ## DX+Net Receiver
 

@@ -7,7 +7,7 @@ The **Conversion** processor (Unit Settings) converts the raw input signal into 
 * [**Unit Conversion**](#unit-conversion) — convert between engineering units within the same domain, optionally with EU calibration.
 * [**WSB (Strain Gage)**](#wsb-strain-gage) — convert a Wheatstone bridge signal into strain (and optionally stress).
 
-A **Scaling** section is present in every mode and is applied as the final step.
+A **Scaling** section is present in every mode except **Tachometer** and is applied as the final step.
 
 ---
 
@@ -34,13 +34,13 @@ Converts a tachometer pulse signal into RPM. The output stream has units of `s :
 
 ### EU Calibration
 
-Tachometer mode supports the same **EU Calibration** group as Unit Conversion — enable it to apply a polynomial calibration to the raw input before pulse detection. See [EU Calibration](#eu-calibration) below for field details.
+With the **Analog** trigger type, Tachometer mode shows the same **EU Calibration** group as Unit Conversion — enable it to apply a polynomial calibration to the raw input before pulse detection. See [EU Calibration](#eu-calibration) below for field details. The group is not shown with the **Digital** trigger type.
 
 ### Conversion
 
 * **Trigger Type** — how pulses are detected.
+  * **Analog** *(default)* — pulses are detected by threshold crossing on an analog input. Exposes the additional trigger fields below.
   * **Digital** — pulses are read from a digital input line. Only **PPR** is required.
-  * **Analog** — pulses are detected by threshold crossing on an analog input. Exposes the additional trigger fields below.
 * **PPR** — Pulses Per Revolution of the tachometer. Default: `1.00`.
 
 When **Trigger Type** is **Analog**, an **Analog Trigger Settings** group is shown:
@@ -51,9 +51,8 @@ When **Trigger Type** is **Analog**, an **Analog Trigger Settings** group is sho
   * **Trigger Inverted** — toggle to invert the trigger polarity.
   * **Debounce Reference** / **Debounce Value** — how extra crossings shortly after a pulse are rejected, for example by maximum RPM together with the PPR.
 
-### Scaling
-
-The standard Scale / Offset are applied to the output RPM value.
+> [!NOTE]
+> Tachometer mode has no **Scaling** section; the output is the RPM value.
 
 ---
 
@@ -130,7 +129,7 @@ The standard Scale / Offset are applied to the final strain (or stress) value.
 
 ## Scaling (common)
 
-The **Scaling** section appears at the bottom of every mode and is applied last.
+The **Scaling** section appears at the bottom of every mode except Tachometer and is applied last.
 
 * **Scale** — multiplicative factor applied to the converted output. Default: `1.000000`.
 * **Offset** — additive offset applied after scaling. Default: `0.000000`.

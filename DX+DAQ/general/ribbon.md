@@ -32,6 +32,9 @@ If the current setup has unsaved changes when you choose **New** or **Open**, DX
 
 ## Freq Limits
 
+![Freq Limits ribbon group](../images/daq-ribbon-freq-limits.png)
+*Freq Limits ribbon group*
+
 The Freq Limits group assigns a frequency limits file to the setup. Frequency limits are checked against the output of the [Spectral](../processors/spectral.md) processor.
 
 * **Assign** — choose a limits file. Only CSV (`.csv`) files are accepted. The signal names in the file must match the **Logical Names** in the table.

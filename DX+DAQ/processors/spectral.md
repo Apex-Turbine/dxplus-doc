@@ -2,6 +2,8 @@
 
 The **Spectral** processor produces frequency-domain output from the selected streams. It supports both FFT and DFT modes and offers optional peak detection through the **Advanced DSP** section.
 
+To open **Spectral Settings**, select one or more cells in the **Spectral** column, then click the column header button. The settings apply to every selected row.
+
 ## FFT / DFT Settings
 
 ### Mode
