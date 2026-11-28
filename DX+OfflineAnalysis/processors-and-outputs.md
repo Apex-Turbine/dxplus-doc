@@ -28,8 +28,8 @@ Attach one or more sinks in the **DX+ Outputs** dock (note that pure sinks such 
 
 | Offline Output | Destination / Role | Key Configuration |
 | :--- | :--- | :--- |
-| **`APEX Viewer`** | Interactive embedded post-test Viewer | Supports all [Time-Based](../DX+DataViewer/time-based-plots.md), [Frequency-Based](../DX+DataViewer/frequency-based-plots.md), `Table`, 3D `Model Viewer`, and `Video` plots with **Time Sync**, playback slider, and single-step controls. |
-| **`DXDB Offline Writer`** | New SQLite `.dxdb` / `.dxdb.index` database | Writes processed offline results to disk for archiving, sharing, or opening in [DX+ Data Viewer](../DX+DataViewer/README.md) and [DX+ DB Manager](../Tools/DB%20Manager/README.md). |
+| **`APEX Viewer`** | Interactive embedded post-test Viewer | Supports all [Time-Based](../DX+Viewer/General/time-based-plots.md), [Frequency-Based](../DX+Viewer/General/frequency-based-plots.md), `Table`, 3D `Model Viewer`, and `Video` plots with **Time Sync**, playback slider, and single-step controls. |
+| **`DXDB Offline Writer`** | New SQLite `.dxdb` / `.dxdb.index` database | Writes processed offline results to disk for archiving, sharing, or opening in [DX+ Data Viewer](../DX+Viewer/DX+DataViewer/README.md) and [DX+ DB Manager](../Tools/DB%20Manager/README.md). |
 | **`Postgres DB Offline Writer`** | PostgreSQL server | Writes processed results directly back into an enterprise PostgreSQL telemetry repository. |
 | **`DATX File Writer`** | `.datx` / `.datx_index` | Exports processed streams into Dewesoft DATX containers (`Single File`, `Channels`, `Sample Rate`, or split thresholds). |
 | **`APEX RWX File Writer`** | `.rwx` | Exports processed streams into APEX RWX binary files (streams grouped into one `.rwx` must match in sample rate or differ by a power of 2). |

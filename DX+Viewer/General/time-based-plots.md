@@ -14,7 +14,7 @@ Displays raw or processed time-domain waveform blocks on a per-block basis.
 ![Scope (Time) Plot](images/scope-time.png)
 
 - **Axes**: X-axis can show block time (`s`, `ms`) or another dragged signal (XY waveform).
-- **Plot Options**: Uses the standard `General`, `Axes`, and `Traces` tabs from [Common Plot Options](ribbon-and-options.md#common-plot-options-tabs).
+- **Plot Options**: Uses the standard `General`, `Axes`, and `Traces` tabs from [Common Plot Options](workspace-and-ribbons.md#plot-options).
 
 ---
 
@@ -83,7 +83,7 @@ Meter-style radial dial with customizable scale arcs and thresholds.
 
 ### LED
 
-Multi-segment LED bar or status indicator. *(Note: right-clicking and editing settings when an LED was saved vertically requires re-confirming Vertical orientation; see [Known Issues](../release-notes/known-issues.md).)*
+Multi-segment LED bar or status indicator. *(Note: right-clicking and editing settings when an LED was saved vertically requires re-confirming Vertical orientation; see [Known Issues](../../release-notes/known-issues.md).)*
 
 ![LED Graphic Display](images/led-plot.png)
 

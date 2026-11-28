@@ -2,7 +2,7 @@
 
 ![daq transmit](../images/daq-transmit.png)
 
-The **Transmit** tab publishes selected streams over the network so that [DX+ Remote Viewer](../../DX+RemoteViewer/README.md) or [DXNet Bridges](../../Services/DXNet%20Bridge%20%28OPCUA%29/README.md) can subscribe and plot or forward the data live.
+The **Transmit** tab publishes selected streams over the network so that [DX+ Remote Viewer](../../DX+Viewer/DX+RemoteViewer/README.md) or [DXNet Bridges](../../Services/DXNet%20Bridge%20%28OPCUA%29/README.md) can subscribe and plot or forward the data live.
 
 ## Settings
 

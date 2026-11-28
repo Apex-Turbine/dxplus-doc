@@ -39,7 +39,7 @@ Select the **DAQ Control** ribbon tab above the Viewer to control execution:
 4. **Limits (`R` / `F`)**: Click either status indicator to inspect per-channel **Range Limits (`R`)** and **Frequency/Modal Limits (`F`)** warnings and alerts.
 5. **System Usage & Store Usage**: Track host `RAM`, `CPU`, `NET` utilization alongside active database `DISK` free space and ingestion `RATE`.
 
-For complete details on live plot layouts, cursors, zoom shortcuts, and limit alert behavior, see the **[DX+ Remote Viewer Guide](../DX+RemoteViewer/README.md)** and **[DX+ Data Viewer Plot Reference](../DX+DataViewer/time-based-plots.md)**.
+For complete details on live plot layouts, cursors, zoom shortcuts, and limit alert behavior, see the **[Viewer General](../DX+Viewer/General/README.md)** pages — [Workspace & Ribbons](../DX+Viewer/General/workspace-and-ribbons.md), [Building Plots](../DX+Viewer/General/building-plots.md), and [DAQ Control, Status & Limits](../DX+Viewer/General/daq-control-and-limits.md).
 
 ---
 

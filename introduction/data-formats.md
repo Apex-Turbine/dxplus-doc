@@ -43,7 +43,7 @@ Both SQLite and PostgreSQL storage drivers share the standard **APEX Phoenix Dat
 When high-throughput DAQ setups enable file splitting (**Time**, **Size**, or **Event**) or partitioning (**None**, **Sources**, **Streams**):
 
 - Data partitions are written into linked SQLite shard files referenced through `tables_json` (`parts[].location` and optional `parts[].recordNumber`).
-- Opening the master **`.dxdb.index`** file in [DX+ Data Viewer](../DX+DataViewer/README.md), [DX+ Offline Analysis](../DX+OfflineAnalysis/README.md), or [DX+ DB Manager](../Tools/DB%20Manager/README.md) automatically resolves, attaches, and unions all external shard tables transparently.
+- Opening the master **`.dxdb.index`** file in [DX+ Data Viewer](../DX+Viewer/DX+DataViewer/README.md), [DX+ Offline Analysis](../DX+OfflineAnalysis/README.md), or [DX+ DB Manager](../Tools/DB%20Manager/README.md) automatically resolves, attaches, and unions all external shard tables transparently.
 
 > [!NOTE]
 > **All Data vs. Events-Only Recording (`eventmode`)**: When **All Data** is checked in DAQ or Online Store settings (`eventmode = false` in JSON), configured streams write continuously while **RECORDING** is active. Disabling **All Data** (`eventmode = true`) or enabling **Event-based file splitting** restricts database writes strictly to active **EVENT REC** intervals.

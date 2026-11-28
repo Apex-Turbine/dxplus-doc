@@ -60,7 +60,7 @@ Once the device element is placed on the canvas, connect to the hardware:
 2. Select **Viewer**.
 
 > [!NOTE]
-> You can add multiple outputs simultaneously — for example **SQLite Output** to record `.dxdb` files to disk and **DX+ Transmit** to publish live streams to [DX+ Remote Viewer](../DX+RemoteViewer/README.md).
+> You can add multiple outputs simultaneously — for example **SQLite Output** to record `.dxdb` files to disk and **DX+ Transmit** to publish live streams to [DX+ Remote Viewer](../DX+Viewer/DX+RemoteViewer/README.md).
 
 ### Processing: FFT Element
 
@@ -128,4 +128,4 @@ Once the device element is placed on the canvas, connect to the hardware:
 
 - Hardware table workflows: [DX+ DAQ Guide](../DX+DAQ/README.md)
 - Advanced visual graphs: [DX+ Online Analysis Guide](../DX+OnlineAnalysis/README.md)
-- Detailed plot settings: [DX+ Data Viewer Guide](../DX+DataViewer/README.md)
+- Detailed plot settings: [Plot Options](../DX+Viewer/General/workspace-and-ribbons.md#plot-options)

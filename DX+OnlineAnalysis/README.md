@@ -11,7 +11,7 @@
 
 - **Visual Node-Graph Pipeline (`.dpd`)**: Drag inputs, processors, and outputs onto an unlimited canvas, toggle individual streams, annotate nodes, and wire parallel or branching processing chains.
 - **Real-Time Streaming DSP**: Execute spectral FFT/DFT and Order FFT, digital FIR/IIR and Order filters, tachometer & angular resampling, relative phase alignment, octave bands, frequency binning, modal/static fit, and multi-stream `Signal Math`.
-- **Simultaneous Multi-Sink Fan-Out**: Forward streams concurrently to the embedded live **Viewer**, **SQLite (`.dxdb`)**, **PostgreSQL**, **APEX-H5**, **DATX**, **RWX**, **3D Model Viewer/Publisher**, **DX+ IDDS Publisher**, and **DX+Net Transmitter** (for [DX+ Remote Viewer](../DX+RemoteViewer/README.md) or [OPC UA](../Services/DXNet%20Bridge%20%28OPCUA%29/README.md) / [PLC](../Services/DXNet%20Bridge%20%28PLC%29/README.md) bridges).
+- **Simultaneous Multi-Sink Fan-Out**: Forward streams concurrently to the embedded live **Viewer**, **SQLite (`.dxdb`)**, **PostgreSQL**, **APEX-H5**, **DATX**, **RWX**, **3D Model Viewer/Publisher**, **DX+ IDDS Publisher**, and **DX+Net Transmitter** (for [DX+ Remote Viewer](../DX+Viewer/DX+RemoteViewer/README.md) or [OPC UA](../Services/DXNet%20Bridge%20%28OPCUA%29/README.md) / [PLC](../Services/DXNet%20Bridge%20%28PLC%29/README.md) bridges).
 - **Integrated Live Viewer & DAQ Control**: Submitting a design compiles and starts the Phoenix runtime graph and switches directly to the embedded real-time Viewer and **DAQ Control** ribbon.
 
 ---

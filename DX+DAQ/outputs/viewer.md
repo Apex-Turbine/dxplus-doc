@@ -2,7 +2,7 @@
 
 ![daq viewer](../images/daq-viewer.png)
 
-The **Viewer** tab selects which streams from the DAQ setup are forwarded to the embedded [Viewer](../../DX+RemoteViewer/live-plots.md) for live plotting.
+The **Viewer** tab selects which streams from the DAQ setup are forwarded to the embedded [Viewer](../../DX+Viewer/General/building-plots.md) for live plotting.
 
 ## Streams
 

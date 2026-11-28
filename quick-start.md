@@ -68,9 +68,9 @@ Shortcuts are in the **Start menu** under **APEX DX+** and **APEX LM**. To add o
 
 ## Step 3: Monitor Live Streams (`DX+ Remote Viewer`)
 
-1. Launch **DX+ Remote Viewer** (or **DXNet-Rx**) ([DX+ Remote Viewer Guide](DX+RemoteViewer/README.md)).
-2. Select a discovered `_dxnet._tcp.local` mDNS stream (or enter `<host>:27026`) ([Connecting & Streams](DX+RemoteViewer/connecting-and-streams.md)).
-3. Drag signals onto a plot grid to build real-time Scope, FFT, Campbell, Waterfall, Gauge, or Bar displays and track scope limits ([Live Plots](DX+RemoteViewer/live-plots.md)).
+1. Launch **DX+ Remote Viewer** (or **DXNet-Rx**) ([DX+ Remote Viewer Guide](DX+Viewer/DX+RemoteViewer/README.md)).
+2. Select a discovered `_dxnet._tcp.local` mDNS stream (or enter `<host>:27026`) ([Connecting & Streams](DX+Viewer/DX+RemoteViewer/connecting-and-streams.md)).
+3. Drag signals onto a plot grid to build real-time Scope, FFT, Campbell, Waterfall, Gauge, or Bar displays and track scope limits ([Building Plots](DX+Viewer/General/building-plots.md)).
 
 ---
 
@@ -83,5 +83,5 @@ Shortcuts are in the **Start menu** under **APEX DX+** and **APEX LM**. To add o
 
 ## Step 5: Inspect & Export Results (`DX+ Data Viewer` & `DB Manager`)
 
-1. Open saved `.dxdb`, `.h5`, `.datx`, `.rwx`, `.pkx`, or PostgreSQL runs in **[DX+ Data Viewer](DX+DataViewer/README.md)** to build synchronized time and frequency plots ([Loading & Playback](DX+DataViewer/loading-and-playback.md)).
+1. Open saved `.dxdb`, `.h5`, `.datx`, `.rwx`, `.pkx`, or PostgreSQL runs in **[DX+ Data Viewer](DX+Viewer/DX+DataViewer/README.md)** to build synchronized time and frequency plots ([Loading & Playback](DX+Viewer/DX+DataViewer/loading-and-playback.md)).
 2. Use **[DX+ DB Manager](Tools/DB%20Manager/README.md)** (`dx+dbmanager.exe`) to browse test runs, edit ROI events, merge databases, or export multi-rate columnar `.csv`, `.datx`, or `.rwx` files.

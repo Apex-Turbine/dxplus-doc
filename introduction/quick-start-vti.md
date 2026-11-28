@@ -54,7 +54,7 @@ Add the **VTI DSA Device** element and connect to the chassis:
 2. Select **Viewer**.
 
 > [!NOTE]
-> Additional outputs can run alongside **Viewer**, including **SQLite Database** (records `.dxdb` files to disk) and **DX+ Transmit** (publishes live telemetry for [DX+ Remote Viewer](../DX+RemoteViewer/README.md)).
+> Additional outputs can run alongside **Viewer**, including **SQLite Database** (records `.dxdb` files to disk) and **DX+ Transmit** (publishes live telemetry for [DX+ Remote Viewer](../DX+Viewer/DX+RemoteViewer/README.md)).
 
 ### Processing: FFT Element
 

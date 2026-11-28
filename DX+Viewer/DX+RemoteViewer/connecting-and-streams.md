@@ -18,7 +18,7 @@
 
 | Publisher Application | Default Control Port | Notes |
 | :--- | :--- | :--- |
-| **DX+ DAQ (`Transmit` tab)** | **`27026`** | Configurable in the [DAQ Transmit Output](../DX+DAQ/outputs/transmit.md) tab. |
+| **DX+ DAQ (`Transmit` tab)** | **`27026`** | Configurable in the [DAQ Transmit Output](../../DX+DAQ/outputs/transmit.md) tab. |
 | **DX+ Online Analysis (`DX+Net Transmitter`)** | **`27026`** *(or auto `-1`)* | Sequential multi-instance transmitters also use **`27126`–`27176`**. |
 | **DXNet Bridge (OPC UA)** | **`27126`** | ZeroMQ REP control + PUB streaming (`27127`). |
 | **DXNet Bridge (PLC)** | **`27136`** | ZeroMQ REP control + PUB streaming (`27137`). |
@@ -38,3 +38,17 @@
 3. **Built-In Demo Rig**: Click **Launch Demo** (or **Demo**) to start an in-process simulated turbine publisher with starter dashboards for training without hardware.
 4. **Origin-Collapsed Stream Browser**: Automatically groups raw channels, server FFTs, nested `Statistics` (`Max`, `Min`, `Avg`, `Peak`, `P2P`, `RMS`), and `Modal Limits` beneath shared **Origin Source** groups with quick filter pills (**`All`**, **`Plot`**, **`Alert`**, **`FFT`**, **`Stats`**) and **`Src (N)`** variant selection (including **`SERVER FFT`** vs. local **`ON-DEVICE FFT`** fallback).
 5. **Themes & Persistence**: Switch between `DX+ Dark`, `Midnight OLED`, `Slate`, `DX+ Blue`, and `Engineer Light`; pages, layouts, strip buffers, and saved connections persist in `dxnet-rx-workspace.json`.
+
+### DXNet-Rx Plot Views
+
+When monitoring live **DXNet** streams from **DXNet-Rx** (`DXPlus-ViewApp`), 9 hardware-accelerated Skia views are supported out of the box (up to **16 tiles per page**, preserving subscriptions silently across tab switches):
+
+1. **`Strip Chart`**: Defaults to full-session elapsed time with automatic `4096`-point min/max envelope decimation *(or switchable `30s` / `300s` rolling windows)*.
+2. **`Scope`**: Displays the latest received block with automatic X-axis units (`s`, `deg`, `Hz`, or `Point2D` XY).
+3. **`Spectral / FFT`**: Plots **`STREAMED FFT (SERVER)`** directly from complex streams or computes **`LOCAL FFT (ON-DEVICE · Hann)`** locally from time waveforms with **Magnitude**, **PSD**, **dB**, peak annotations, and **Peak Hold**.
+4. **`Session History`**: Full-session min/max envelope trend.
+5. **`Digital Readout`**: High-contrast value readout with `OK`/`WARN`/`ALERT` badge and `MIN / RMS / MAX`.
+6. **`Speedometer Dial`**: `270°` radial gauge with colored Warning/Alert arc bands.
+7. **`Thermometer Gauge`**: Vertical bulb thermometer with limit ticks.
+8. **`Bar Meter`**: Horizontal/vertical bar meter with RMS indicator.
+9. **`LED Bar / Status Lamp`**: 16-segment color meter or boolean interlock lamp (`GOOD` / `WARN` / `ALERT` / `ACTIVE` / `CLEAR`).

@@ -19,7 +19,7 @@ Forwards selected streams to the built-in real-time **Viewer** tab.
 
 ### `DX+Net Transmitter` (`DXPNetTransmitterComponent`)
 
-Publishes selected streams over ZeroMQ (`REP`/`PUB`) with mDNS service discovery (`_dxnet._tcp.local`) for consumption by [DX+ Remote Viewer](../DX+RemoteViewer/README.md), [DXNet-Rx](../DX+RemoteViewer/connecting-and-streams.md#dxnet-rx-companion-viewer-windows--android), other **DX+ Online Analysis** systems, [DXNet Bridge (OPC UA)](../Services/DXNet%20Bridge%20%28OPCUA%29/README.md), or [DXNet Bridge (PLC)](../Services/DXNet%20Bridge%20%28PLC%29/README.md).
+Publishes selected streams over ZeroMQ (`REP`/`PUB`) with mDNS service discovery (`_dxnet._tcp.local`) for consumption by [DX+ Remote Viewer](../DX+Viewer/DX+RemoteViewer/README.md), [DXNet-Rx](../DX+Viewer/DX+RemoteViewer/connecting-and-streams.md#dxnet-rx-companion-viewer-windows-android), other **DX+ Online Analysis** systems, [DXNet Bridge (OPC UA)](../Services/DXNet%20Bridge%20%28OPCUA%29/README.md), or [DXNet Bridge (PLC)](../Services/DXNet%20Bridge%20%28PLC%29/README.md).
 
 - **Port**: Control port (`27026` default in Designer UI; ZeroMQ port range `27126`–`27176` or auto-assigned `-1` supported in Phoenix).
 - **Advanced Buffer Keys**: `zmq_maxdelay` (`0.1 s`), `zmq_maxbuffer` (`10,000,000` bytes), `zmq_maxalloc` (`1,000,000,000` bytes), `zmq_maxhistory` (`60.0 s`).

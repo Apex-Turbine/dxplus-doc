@@ -31,7 +31,7 @@ You can freely assign custom logical output names on `Stream Select` without bre
 4. **Tier 3**: 1:1 positional alignment fallback against the mapped database sources.
 
 > [!CAUTION]
-> **RWX Files with `Stream Select`:** Do **not** load an `.rwx` file into **`Stream Select`** — doing so is a known crash vector in Offline Analysis. Use **SQLite (`.dxdb` / `.dxdb.index`)** or **PostgreSQL** databases with `Stream Select`, or inspect `.rwx` files directly in **[DX+ Data Viewer](../DX+DataViewer/README.md)**.
+> **RWX Files with `Stream Select`:** Do **not** load an `.rwx` file into **`Stream Select`** — doing so is a known crash vector in Offline Analysis. Use **SQLite (`.dxdb` / `.dxdb.index`)** or **PostgreSQL** databases with `Stream Select`, or inspect `.rwx` files directly in **[DX+ Data Viewer](../DX+Viewer/DX+DataViewer/README.md)**.
 
 ---
 

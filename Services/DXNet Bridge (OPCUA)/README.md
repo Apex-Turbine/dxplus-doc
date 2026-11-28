@@ -29,7 +29,7 @@ flowchart LR
     CLIENTS -->|"opc.tcp Subscribe"| MIRROR
 ```
 
-1. **Read Mode (`OPC UA -> DX+`)**: Subscribes to selected OPC UA variable nodes using Monitored Items and broadcasts them as Phoenix binary telemetry streams over **DXPNet** (`tcp://127.0.0.1:27126` default, announced via mDNS `_dxnet._tcp.local`) for consumption by [DX+ Online Analysis](../../DX+OnlineAnalysis/README.md) or [DX+ Remote Viewer](../../DX+RemoteViewer/README.md).
+1. **Read Mode (`OPC UA -> DX+`)**: Subscribes to selected OPC UA variable nodes using Monitored Items and broadcasts them as Phoenix binary telemetry streams over **DXPNet** (`tcp://127.0.0.1:27126` default, announced via mDNS `_dxnet._tcp.local`) for consumption by [DX+ Online Analysis](../../DX+OnlineAnalysis/README.md) or [DX+ Remote Viewer](../../DX+Viewer/DX+RemoteViewer/README.md).
 2. **Write Mode (`DX+ -> OPC UA`)**: Subscribes to live **DX+Net** streams (including unrolling hierarchical `DATA_MESSAGES` containers such as `Statistics` `Max`/`Min`/`RMS`) and publishes them either:
    - Directly into writable nodes on external OPC UA servers (**`write` mode**), or
    - Into the built-in **Embedded Read-Only Mirror Server** (**`mirror` mode**, default `opc.tcp://0.0.0.0:4850/opcua/bridge/mirror/` under `Objects/BridgeMirror`) so external SCADA/DCS historians can subscribe without exposing writable tags on plant controllers.

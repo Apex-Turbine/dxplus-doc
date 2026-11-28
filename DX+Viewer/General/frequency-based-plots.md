@@ -14,7 +14,7 @@ Displays frequency-domain spectral blocks on a per-block basis.
 ![Scope (Frequency) Plot](images/scope-frequency.png)
 
 - **Axes**: X-axis displays `Hz`, angular `degrees`, or another dragged reference signal.
-- **Plot Options**: Standard `General`, `Axes`, and `Traces` tabs ([Common Plot Options](ribbon-and-options.md#common-plot-options-tabs)).
+- **Plot Options**: Standard `General`, `Axes`, and `Traces` tabs ([Common Plot Options](workspace-and-ribbons.md#plot-options)).
 
 ---
 
@@ -81,7 +81,7 @@ Heatmap spectrogram plotting spectral magnitude by color intensity against Time 
 
 ![Zmod Spectrogram Plot](images/zmod-plot.png)
 
-- **Limitation**: A **Zmod** plot displays **one trace at a time** (and see [Known Issues](../release-notes/known-issues.md) for current Zmod marker clearing and export advisories).
+- **Limitation**: A **Zmod** plot displays **one trace at a time** (and see [Known Issues](../../release-notes/known-issues.md) for current Zmod marker clearing and export advisories).
 - **Plot Options**: Includes **Absolute Time** on **Axes** plus a dedicated **Zmod** colormap/range options tab.
 
 ![Zmod Axes Options](images/zmod-options-axes.png)
@@ -96,7 +96,7 @@ Displays per-block spectral or octave-band bins as vertical bars.
 
 ![Frequency Bar Plot](images/bar-frequency-plot.png)
 
-- **Limitation**: Displays **one trace at a time** and uses the [Common Plot Options](ribbon-and-options.md#common-plot-options-tabs) tabs.
+- **Limitation**: Displays **one trace at a time** and uses the [Common Plot Options](workspace-and-ribbons.md#plot-options) tabs.
 
 ---
 

@@ -30,4 +30,4 @@ The Store Inputs tree lists every stream available to record, grouped by source 
 * The toolbar buttons expand/collapse all groups and enable/disable the selected streams.
 
 > [!NOTE]
-> The resulting `.dxdb` file can be opened in [DX+ Data Viewer](../../DX+DataViewer/README.md) for playback, managed in [DX+ DB Manager](../../Tools/DB%20Manager/README.md), or processed in [DX+ Offline Analysis](../../DX+OfflineAnalysis/README.md).
+> The resulting `.dxdb` file can be opened in [DX+ Data Viewer](../../DX+Viewer/DX+DataViewer/README.md) for playback, managed in [DX+ DB Manager](../../Tools/DB%20Manager/README.md), or processed in [DX+ Offline Analysis](../../DX+OfflineAnalysis/README.md).
